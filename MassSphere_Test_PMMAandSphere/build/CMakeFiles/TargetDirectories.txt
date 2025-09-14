@@ -1,0 +1,7 @@
+/home/smanzuetaf/MassSphere_Test_PMMAandSphere/build/CMakeFiles/install/strip.dir
+/home/smanzuetaf/MassSphere_Test_PMMAandSphere/build/CMakeFiles/install/local.dir
+/home/smanzuetaf/MassSphere_Test_PMMAandSphere/build/CMakeFiles/install.dir
+/home/smanzuetaf/MassSphere_Test_PMMAandSphere/build/CMakeFiles/list_install_components.dir
+/home/smanzuetaf/MassSphere_Test_PMMAandSphere/build/CMakeFiles/rebuild_cache.dir
+/home/smanzuetaf/MassSphere_Test_PMMAandSphere/build/CMakeFiles/edit_cache.dir
+/home/smanzuetaf/MassSphere_Test_PMMAandSphere/build/CMakeFiles/pepi.dir

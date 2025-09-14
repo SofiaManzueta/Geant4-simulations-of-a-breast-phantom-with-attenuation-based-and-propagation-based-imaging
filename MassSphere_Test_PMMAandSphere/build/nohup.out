@@ -1,0 +1,1548 @@
+
+**************************************************************
+ Geant4 version Name: geant4-10-06-patch-01    (14-February-2020)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+OpenGLImmediateQt (OGLIQt, OGLI)
+OpenGLStoredQt (OGLSQt, OGL, OGLS)
+OpenGLImmediateX (OGLIX, OGLIQt_FALLBACK)
+OpenGLStoredX (OGLSX, OGLSQt_FALLBACK)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+*** /run/numberOfThreads command is issued in sequential mode.
+Command is ignored.
+0 is out of bounds (Must be > 0.1 m AND < 2 m. - Command is ignored.
+The mask thickness is 100um
+The detector mask pitch is 20um
+The detector mask aperture is 3um
+
+Reading configuration file...
+Step is: 20 um and Dither is is: 0 um and angle is: 90 deg
+... done 
+G4Material WARNING: duplicate name of material PlaqueI
+reading delta values from ../data/Graphite_delta.txt
+reading delta values from ../data/Silicon_delta.txt
+reading delta values from ../data/PMMA_delta.txt
+reading delta values from ../data/Nylon_delta.txt
+reading delta values from ../data/Polycharbonate_delta.txt
+reading delta values from ../data/Water_delta.txt
+reading delta values from ../data/Energy.txt
+reading delta values from ../data/Air_delta.txt
+reading delta values from ../data/P.Iodine_delta.txt
+reading delta values from ../data/Blood_delta.txt
+reading delta values from ../data/Alumina_delta.txt
+reading delta values from ../data/HA_delta.txt
+reading delta values from ../data/Aorta_delta.txt
+reading delta values from ../data/Breast5050_delta.txt
+reading delta values from ../data/Breast8515_delta.txt
+reading delta values from ../data/Plaque9010_delta.txt
+reading delta values from ../data/Plaque8020_delta.txt
+reading delta values from ../data/Plaque7030_delta.txt
+reading delta values from ../data/Glandular_delta.txt
+reading delta values from ../data/Adipose_delta.txt
+reading delta values from ../data/Muscle_delta.txt
+reading delta values from ../data/Silicone_delta.txt
+reading delta values from ../data/Wax_delta.txt
+G4SDManager::AddNewCollection : the collection <PixiRadSD/TotalSurfCurrent> is registered at 1
+G4SDManager::AddNewCollection : the collection <IonChamberSD/CurrentIoC> is registered at 2
+--- G4CoupledTransportation is used 
+.... G4ScoringMessenger::MeshBinCommand - G4ScoringBox
+G4VScoringMesh::SetPrimitiveScorer() : dose is registered. 3D size: (1, 1, 1)
+G4SDManager::AddNewCollection : the collection <Mesh1/dose> is registered at 3
+G4VScoringMesh::SetPrimitiveScorer() : passageCellFlux is registered. 3D size: (1, 1, 1)
+G4SDManager::AddNewCollection : the collection <Mesh1/passageCellFlux> is registered at 4
+G4VScoringMesh::SetFilter() : protonFilter is set to passageCellFlux
+.... G4ScoringMessenger::MeshBinCommand - G4ScoringBox
+G4VScoringMesh::SetPrimitiveScorer() : dose is registered. 3D size: (5, 80, 5)
+G4SDManager::AddNewCollection : the collection <Mesh2/dose> is registered at 5
+G4VScoringMesh::SetPrimitiveScorer() : protonCellFlux is registered. 3D size: (5, 80, 5)
+G4SDManager::AddNewCollection : the collection <Mesh2/protonCellFlux> is registered at 6
+G4VScoringMesh::SetFilter() : protonFilter is set to protonCellFlux
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 2 regions:
+          DefaultRegionForTheWorld  1  0  0
+          PixiRad  1  0  0
+### ===  Ignore cuts flag:   0
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 174 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 20 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 160 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+    LivermoreCompton : Emin=    0 eV  Emax=    1 GeV Fluo
+        KleinNishina : Emin=    1 GeV Emax=  100 TeV Fluo
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+      BetheHeitler5D : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 20 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 180 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      RangeFactor= 0.08, stepLimType: 2, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  GoudsmitSaunderson : Emin=    0 eV  Emax=  100 MeV Nbins=120 100 eV  - 100 MeV
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=120 100 MeV - 100 TeV
+
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.01 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       LowEnergyIoni : Emin=    0 eV  Emax=  100 keV  deltaVI
+        MollerBhabha : Emin=  100 keV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  AngularGen2BS
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  AngularGen2BS
+
+ePairProd:  for e-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 25x1001; from 0.1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           ePairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e-, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 20 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      RangeFactor= 0.08, stepLimType: 2, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  GoudsmitSaunderson : Emin=    0 eV  Emax=  100 MeV Nbins=120 100 eV  - 100 MeV
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=120 100 MeV - 100 TeV
+
+eIoni:  for e+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.01 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+eBrem:  for e+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  AngularGen2BS
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  AngularGen2BS
+
+ePairProd:  for e+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 25x1001; from 0.1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           ePairProd : Emin=    0 eV  Emax=  100 TeV
+
+annihil:  for e+, integral:1  SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 20 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+hIoni:  for proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV  deltaVI
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+hBrems:  for proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 20 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+
+ionIoni:  for GenericIon  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.1, 0.001 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+         ParamICRU73 : Emin=    0 eV  Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+nuclearStopping:  for GenericIon SubType=8 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping : Emin=    0 eV  Emax=    1 MeV
+
+msc:  for alpha  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+ionIoni:  for alpha  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV  deltaVI
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+nuclearStopping:  for alpha SubType=8 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping : Emin=    0 eV  Emax=    1 MeV
+
+msc:  for anti_proton  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+hIoni:  for anti_proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV  deltaVI
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+hBrems:  for anti_proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for anti_proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 20 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+hIoni:  for kaon+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV  deltaVI
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+hBrems:  for kaon+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for kaon+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 20 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+hIoni:  for kaon-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV  deltaVI
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+hBrems:  for kaon-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for kaon-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1, polarAngLim(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+muIoni:  for mu+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV  deltaVI
+          BetheBloch : Emin=  200 keV Emax=    1 GeV  deltaVI
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+      CSDA range table up to 1 GeV in 140 bins
+
+muBrems:  for mu+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV
+
+muPairProd:  for mu+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 20 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1, polarAngLim(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+muIoni:  for mu-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV  deltaVI
+          BetheBloch : Emin=  200 keV Emax=    1 GeV  deltaVI
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+      CSDA range table up to 1 GeV in 140 bins
+
+muBrems:  for mu-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV
+
+muPairProd:  for mu-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+hIoni:  for pi+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV  deltaVI
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+hBrems:  for pi+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for pi+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 20 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=240 100 eV  - 100 TeV
+
+hIoni:  for pi-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.2, 0.05 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV  deltaVI
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV  deltaVI
+      CSDA range table up to 1 GeV in 140 bins
+
+hBrems:  for pi-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for pi-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+G4VisManager: Using G4TrajectoryDrawByCharge as fallback trajectory model.
+See commands in /vis/modeling/trajectories/ for other options.
+++ PixiRadSD/TotalSurfCurrent id 0
+++ IonChamberSD/CurrentIoC id 1
+>>> Frame    1
+	>>> Event 1000000 --- Current (photons/mm2): 0 --- Average counts number: 0.00857
+	>>> Event 2000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0173
+	>>> Event 3000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0262
+	>>> Event 4000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0352
+	>>> Event 5000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0438
+	>>> Event 6000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0527
+	>>> Event 7000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0621
+	>>> Event 8000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0714
+	>>> Event 9000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0801
+	>>> Event 10000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0899
+	>>> Event 11000000 --- Current (photons/mm2): 0 --- Average counts number: 0.0989
+	>>> Event 12000000 --- Current (photons/mm2): 0 --- Average counts number: 0.108
+	>>> Event 13000000 --- Current (photons/mm2): 0 --- Average counts number: 0.117
+	>>> Event 14000000 --- Current (photons/mm2): 0 --- Average counts number: 0.127
+	>>> Event 15000000 --- Current (photons/mm2): 0 --- Average counts number: 0.136
+	>>> Event 16000000 --- Current (photons/mm2): 0 --- Average counts number: 0.145
+	>>> Event 17000000 --- Current (photons/mm2): 0 --- Average counts number: 0.154
+	>>> Event 18000000 --- Current (photons/mm2): 0 --- Average counts number: 0.163
+	>>> Event 19000000 --- Current (photons/mm2): 0 --- Average counts number: 0.172
+	>>> Event 20000000 --- Current (photons/mm2): 0 --- Average counts number: 0.182
+	>>> Event 21000000 --- Current (photons/mm2): 0 --- Average counts number: 0.191
+	>>> Event 22000000 --- Current (photons/mm2): 0 --- Average counts number: 0.2
+	>>> Event 23000000 --- Current (photons/mm2): 0 --- Average counts number: 0.209
+	>>> Event 24000000 --- Current (photons/mm2): 0 --- Average counts number: 0.217
+	>>> Event 25000000 --- Current (photons/mm2): 0 --- Average counts number: 0.227
+	>>> Event 26000000 --- Current (photons/mm2): 0 --- Average counts number: 0.236
+	>>> Event 27000000 --- Current (photons/mm2): 0 --- Average counts number: 0.246
+	>>> Event 28000000 --- Current (photons/mm2): 0 --- Average counts number: 0.256
+	>>> Event 29000000 --- Current (photons/mm2): 0 --- Average counts number: 0.265
+	>>> Event 30000000 --- Current (photons/mm2): 0 --- Average counts number: 0.275
+	>>> Event 31000000 --- Current (photons/mm2): 0 --- Average counts number: 0.284
+	>>> Event 32000000 --- Current (photons/mm2): 0 --- Average counts number: 0.293
+	>>> Event 33000000 --- Current (photons/mm2): 0 --- Average counts number: 0.303
+	>>> Event 34000000 --- Current (photons/mm2): 0 --- Average counts number: 0.312
+	>>> Event 35000000 --- Current (photons/mm2): 0 --- Average counts number: 0.322
+	>>> Event 36000000 --- Current (photons/mm2): 0 --- Average counts number: 0.331
+	>>> Event 37000000 --- Current (photons/mm2): 0 --- Average counts number: 0.34
+	>>> Event 38000000 --- Current (photons/mm2): 0 --- Average counts number: 0.35
+	>>> Event 39000000 --- Current (photons/mm2): 0 --- Average counts number: 0.359
+	>>> Event 40000000 --- Current (photons/mm2): 0 --- Average counts number: 0.369
+	>>> Event 41000000 --- Current (photons/mm2): 0 --- Average counts number: 0.378
+	>>> Event 42000000 --- Current (photons/mm2): 0 --- Average counts number: 0.387
+	>>> Event 43000000 --- Current (photons/mm2): 0 --- Average counts number: 0.396
+	>>> Event 44000000 --- Current (photons/mm2): 0 --- Average counts number: 0.406
+	>>> Event 45000000 --- Current (photons/mm2): 0 --- Average counts number: 0.415
+	>>> Event 46000000 --- Current (photons/mm2): 0 --- Average counts number: 0.423
+	>>> Event 47000000 --- Current (photons/mm2): 0 --- Average counts number: 0.431
+	>>> Event 48000000 --- Current (photons/mm2): 0 --- Average counts number: 0.44
+	>>> Event 49000000 --- Current (photons/mm2): 0 --- Average counts number: 0.449
+	>>> Event 50000000 --- Current (photons/mm2): 0 --- Average counts number: 0.459
+	>>> Event 51000000 --- Current (photons/mm2): 0 --- Average counts number: 0.468
+	>>> Event 52000000 --- Current (photons/mm2): 0 --- Average counts number: 0.478
+	>>> Event 53000000 --- Current (photons/mm2): 0 --- Average counts number: 0.486
+	>>> Event 54000000 --- Current (photons/mm2): 0 --- Average counts number: 0.496
+	>>> Event 55000000 --- Current (photons/mm2): 0 --- Average counts number: 0.504
+	>>> Event 56000000 --- Current (photons/mm2): 0 --- Average counts number: 0.513
+	>>> Event 57000000 --- Current (photons/mm2): 0 --- Average counts number: 0.521
+	>>> Event 58000000 --- Current (photons/mm2): 0 --- Average counts number: 0.531
+	>>> Event 59000000 --- Current (photons/mm2): 0 --- Average counts number: 0.54
+	>>> Event 60000000 --- Current (photons/mm2): 0 --- Average counts number: 0.549
+	>>> Event 61000000 --- Current (photons/mm2): 0 --- Average counts number: 0.558
+	>>> Event 62000000 --- Current (photons/mm2): 0 --- Average counts number: 0.567
+	>>> Event 63000000 --- Current (photons/mm2): 0 --- Average counts number: 0.576
+	>>> Event 64000000 --- Current (photons/mm2): 0 --- Average counts number: 0.585
+	>>> Event 65000000 --- Current (photons/mm2): 0 --- Average counts number: 0.595
+	>>> Event 66000000 --- Current (photons/mm2): 0 --- Average counts number: 0.604
+	>>> Event 67000000 --- Current (photons/mm2): 0 --- Average counts number: 0.613
+	>>> Event 68000000 --- Current (photons/mm2): 0 --- Average counts number: 0.623
+	>>> Event 69000000 --- Current (photons/mm2): 0 --- Average counts number: 0.632
+	>>> Event 70000000 --- Current (photons/mm2): 0 --- Average counts number: 0.642
+	>>> Event 71000000 --- Current (photons/mm2): 0 --- Average counts number: 0.652
+	>>> Event 72000000 --- Current (photons/mm2): 0 --- Average counts number: 0.66
+	>>> Event 73000000 --- Current (photons/mm2): 0 --- Average counts number: 0.67
+	>>> Event 74000000 --- Current (photons/mm2): 0 --- Average counts number: 0.679
+	>>> Event 75000000 --- Current (photons/mm2): 0 --- Average counts number: 0.688
+	>>> Event 76000000 --- Current (photons/mm2): 0 --- Average counts number: 0.698
+	>>> Event 77000000 --- Current (photons/mm2): 0 --- Average counts number: 0.707
+	>>> Event 78000000 --- Current (photons/mm2): 0 --- Average counts number: 0.717
+	>>> Event 79000000 --- Current (photons/mm2): 0 --- Average counts number: 0.726
+	>>> Event 80000000 --- Current (photons/mm2): 0 --- Average counts number: 0.735
+	>>> Event 81000000 --- Current (photons/mm2): 0 --- Average counts number: 0.745
+	>>> Event 82000000 --- Current (photons/mm2): 0 --- Average counts number: 0.753
+	>>> Event 83000000 --- Current (photons/mm2): 0 --- Average counts number: 0.762
+	>>> Event 84000000 --- Current (photons/mm2): 0 --- Average counts number: 0.771
+	>>> Event 85000000 --- Current (photons/mm2): 0 --- Average counts number: 0.781
+	>>> Event 86000000 --- Current (photons/mm2): 0 --- Average counts number: 0.79
+	>>> Event 87000000 --- Current (photons/mm2): 0 --- Average counts number: 0.799
+	>>> Event 88000000 --- Current (photons/mm2): 0 --- Average counts number: 0.809
+	>>> Event 89000000 --- Current (photons/mm2): 0 --- Average counts number: 0.819
+	>>> Event 90000000 --- Current (photons/mm2): 0 --- Average counts number: 0.829
+	>>> Event 91000000 --- Current (photons/mm2): 0 --- Average counts number: 0.838
+	>>> Event 92000000 --- Current (photons/mm2): 0 --- Average counts number: 0.847
+	>>> Event 93000000 --- Current (photons/mm2): 0 --- Average counts number: 0.857
+	>>> Event 94000000 --- Current (photons/mm2): 0 --- Average counts number: 0.866
+	>>> Event 95000000 --- Current (photons/mm2): 0 --- Average counts number: 0.875
+	>>> Event 96000000 --- Current (photons/mm2): 0 --- Average counts number: 0.885
+	>>> Event 97000000 --- Current (photons/mm2): 0 --- Average counts number: 0.894
+	>>> Event 98000000 --- Current (photons/mm2): 0 --- Average counts number: 0.904
+	>>> Event 99000000 --- Current (photons/mm2): 0 --- Average counts number: 0.913
+	>>> Event 100000000 --- Current (photons/mm2): 0 --- Average counts number: 0.923
+	>>> Event 101000000 --- Current (photons/mm2): 0 --- Average counts number: 0.932
+	>>> Event 102000000 --- Current (photons/mm2): 0 --- Average counts number: 0.941
+	>>> Event 103000000 --- Current (photons/mm2): 0 --- Average counts number: 0.95
+	>>> Event 104000000 --- Current (photons/mm2): 0 --- Average counts number: 0.959
+	>>> Event 105000000 --- Current (photons/mm2): 0 --- Average counts number: 0.968
+	>>> Event 106000000 --- Current (photons/mm2): 0 --- Average counts number: 0.978
+	>>> Event 107000000 --- Current (photons/mm2): 0 --- Average counts number: 0.986
+	>>> Event 108000000 --- Current (photons/mm2): 0 --- Average counts number: 0.995
+	>>> Event 109000000 --- Current (photons/mm2): 0 --- Average counts number: 1
+	>>> Event 110000000 --- Current (photons/mm2): 0 --- Average counts number: 1.01
+	>>> Event 111000000 --- Current (photons/mm2): 0 --- Average counts number: 1.02
+	>>> Event 112000000 --- Current (photons/mm2): 0 --- Average counts number: 1.03
+	>>> Event 113000000 --- Current (photons/mm2): 0 --- Average counts number: 1.04
+	>>> Event 114000000 --- Current (photons/mm2): 0 --- Average counts number: 1.05
+	>>> Event 115000000 --- Current (photons/mm2): 0 --- Average counts number: 1.06
+	>>> Event 116000000 --- Current (photons/mm2): 0 --- Average counts number: 1.07
+	>>> Event 117000000 --- Current (photons/mm2): 0 --- Average counts number: 1.08
+	>>> Event 118000000 --- Current (photons/mm2): 0 --- Average counts number: 1.08
+	>>> Event 119000000 --- Current (photons/mm2): 0 --- Average counts number: 1.09
+	>>> Event 120000000 --- Current (photons/mm2): 0 --- Average counts number: 1.1
+	>>> Event 121000000 --- Current (photons/mm2): 0 --- Average counts number: 1.11
+	>>> Event 122000000 --- Current (photons/mm2): 0 --- Average counts number: 1.12
+	>>> Event 123000000 --- Current (photons/mm2): 0 --- Average counts number: 1.13
+	>>> Event 124000000 --- Current (photons/mm2): 0 --- Average counts number: 1.14
+	>>> Event 125000000 --- Current (photons/mm2): 0 --- Average counts number: 1.15
+	>>> Event 126000000 --- Current (photons/mm2): 0 --- Average counts number: 1.16
+	>>> Event 127000000 --- Current (photons/mm2): 0 --- Average counts number: 1.17
+	>>> Event 128000000 --- Current (photons/mm2): 0 --- Average counts number: 1.18
+	>>> Event 129000000 --- Current (photons/mm2): 0 --- Average counts number: 1.18
+	>>> Event 130000000 --- Current (photons/mm2): 0 --- Average counts number: 1.19
+	>>> Event 131000000 --- Current (photons/mm2): 0 --- Average counts number: 1.2
+	>>> Event 132000000 --- Current (photons/mm2): 0 --- Average counts number: 1.21
+	>>> Event 133000000 --- Current (photons/mm2): 0 --- Average counts number: 1.22
+	>>> Event 134000000 --- Current (photons/mm2): 0 --- Average counts number: 1.23
+	>>> Event 135000000 --- Current (photons/mm2): 0 --- Average counts number: 1.24
+	>>> Event 136000000 --- Current (photons/mm2): 0 --- Average counts number: 1.25
+	>>> Event 137000000 --- Current (photons/mm2): 0 --- Average counts number: 1.26
+	>>> Event 138000000 --- Current (photons/mm2): 0 --- Average counts number: 1.27
+	>>> Event 139000000 --- Current (photons/mm2): 0 --- Average counts number: 1.28
+	>>> Event 140000000 --- Current (photons/mm2): 0 --- Average counts number: 1.28
+	>>> Event 141000000 --- Current (photons/mm2): 0 --- Average counts number: 1.29
+	>>> Event 142000000 --- Current (photons/mm2): 0 --- Average counts number: 1.3
+	>>> Event 143000000 --- Current (photons/mm2): 0 --- Average counts number: 1.31
+	>>> Event 144000000 --- Current (photons/mm2): 0 --- Average counts number: 1.32
+	>>> Event 145000000 --- Current (photons/mm2): 0 --- Average counts number: 1.33
+	>>> Event 146000000 --- Current (photons/mm2): 0 --- Average counts number: 1.34
+	>>> Event 147000000 --- Current (photons/mm2): 0 --- Average counts number: 1.35
+	>>> Event 148000000 --- Current (photons/mm2): 0 --- Average counts number: 1.36
+	>>> Event 149000000 --- Current (photons/mm2): 0 --- Average counts number: 1.37
+	>>> Event 150000000 --- Current (photons/mm2): 0 --- Average counts number: 1.38
+	>>> Event 151000000 --- Current (photons/mm2): 0 --- Average counts number: 1.38
+	>>> Event 152000000 --- Current (photons/mm2): 0 --- Average counts number: 1.39
+	>>> Event 153000000 --- Current (photons/mm2): 0 --- Average counts number: 1.4
+	>>> Event 154000000 --- Current (photons/mm2): 0 --- Average counts number: 1.41
+	>>> Event 155000000 --- Current (photons/mm2): 0 --- Average counts number: 1.42
+	>>> Event 156000000 --- Current (photons/mm2): 0 --- Average counts number: 1.43
+	>>> Event 157000000 --- Current (photons/mm2): 0 --- Average counts number: 1.44
+	>>> Event 158000000 --- Current (photons/mm2): 0 --- Average counts number: 1.45
+	>>> Event 159000000 --- Current (photons/mm2): 0 --- Average counts number: 1.46
+	>>> Event 160000000 --- Current (photons/mm2): 0 --- Average counts number: 1.47
+	>>> Event 161000000 --- Current (photons/mm2): 0 --- Average counts number: 1.47
+	>>> Event 162000000 --- Current (photons/mm2): 0 --- Average counts number: 1.48
+	>>> Event 163000000 --- Current (photons/mm2): 0 --- Average counts number: 1.49
+	>>> Event 164000000 --- Current (photons/mm2): 0 --- Average counts number: 1.5
+	>>> Event 165000000 --- Current (photons/mm2): 0 --- Average counts number: 1.51
+	>>> Event 166000000 --- Current (photons/mm2): 0 --- Average counts number: 1.52
+	>>> Event 167000000 --- Current (photons/mm2): 0 --- Average counts number: 1.53
+	>>> Event 168000000 --- Current (photons/mm2): 0 --- Average counts number: 1.54
+	>>> Event 169000000 --- Current (photons/mm2): 0 --- Average counts number: 1.55
+	>>> Event 170000000 --- Current (photons/mm2): 0 --- Average counts number: 1.56
+	>>> Event 171000000 --- Current (photons/mm2): 0 --- Average counts number: 1.57
+	>>> Event 172000000 --- Current (photons/mm2): 0 --- Average counts number: 1.57
+	>>> Event 173000000 --- Current (photons/mm2): 0 --- Average counts number: 1.58
+	>>> Event 174000000 --- Current (photons/mm2): 0 --- Average counts number: 1.59
+	>>> Event 175000000 --- Current (photons/mm2): 0 --- Average counts number: 1.6
+	>>> Event 176000000 --- Current (photons/mm2): 0 --- Average counts number: 1.61
+	>>> Event 177000000 --- Current (photons/mm2): 0 --- Average counts number: 1.62
+	>>> Event 178000000 --- Current (photons/mm2): 0 --- Average counts number: 1.63
+	>>> Event 179000000 --- Current (photons/mm2): 0 --- Average counts number: 1.64
+	>>> Event 180000000 --- Current (photons/mm2): 0 --- Average counts number: 1.65
+	>>> Event 181000000 --- Current (photons/mm2): 0 --- Average counts number: 1.65
+	>>> Event 182000000 --- Current (photons/mm2): 0 --- Average counts number: 1.66
+	>>> Event 183000000 --- Current (photons/mm2): 0 --- Average counts number: 1.67
+	>>> Event 184000000 --- Current (photons/mm2): 0 --- Average counts number: 1.68
+	>>> Event 185000000 --- Current (photons/mm2): 0 --- Average counts number: 1.69
+	>>> Event 186000000 --- Current (photons/mm2): 0 --- Average counts number: 1.7
+	>>> Event 187000000 --- Current (photons/mm2): 0 --- Average counts number: 1.71
+	>>> Event 188000000 --- Current (photons/mm2): 0 --- Average counts number: 1.72
+	>>> Event 189000000 --- Current (photons/mm2): 0 --- Average counts number: 1.73
+	>>> Event 190000000 --- Current (photons/mm2): 0 --- Average counts number: 1.74
+	>>> Event 191000000 --- Current (photons/mm2): 0 --- Average counts number: 1.74
+	>>> Event 192000000 --- Current (photons/mm2): 0 --- Average counts number: 1.75
+	>>> Event 193000000 --- Current (photons/mm2): 0 --- Average counts number: 1.76
+	>>> Event 194000000 --- Current (photons/mm2): 0 --- Average counts number: 1.77
+	>>> Event 195000000 --- Current (photons/mm2): 0 --- Average counts number: 1.78
+	>>> Event 196000000 --- Current (photons/mm2): 0 --- Average counts number: 1.79
+	>>> Event 197000000 --- Current (photons/mm2): 0 --- Average counts number: 1.8
+	>>> Event 198000000 --- Current (photons/mm2): 0 --- Average counts number: 1.81
+	>>> Event 199000000 --- Current (photons/mm2): 0 --- Average counts number: 1.82
+	>>> Event 200000000 --- Current (photons/mm2): 0 --- Average counts number: 1.82
+	>>> Event 201000000 --- Current (photons/mm2): 0 --- Average counts number: 1.83
+	>>> Event 202000000 --- Current (photons/mm2): 0 --- Average counts number: 1.84
+	>>> Event 203000000 --- Current (photons/mm2): 0 --- Average counts number: 1.85
+	>>> Event 204000000 --- Current (photons/mm2): 0 --- Average counts number: 1.86
+	>>> Event 205000000 --- Current (photons/mm2): 0 --- Average counts number: 1.87
+	>>> Event 206000000 --- Current (photons/mm2): 0 --- Average counts number: 1.88
+	>>> Event 207000000 --- Current (photons/mm2): 0 --- Average counts number: 1.89
+	>>> Event 208000000 --- Current (photons/mm2): 0 --- Average counts number: 1.9
+	>>> Event 209000000 --- Current (photons/mm2): 0 --- Average counts number: 1.91
+	>>> Event 210000000 --- Current (photons/mm2): 0 --- Average counts number: 1.92
+	>>> Event 211000000 --- Current (photons/mm2): 0 --- Average counts number: 1.93
+	>>> Event 212000000 --- Current (photons/mm2): 0 --- Average counts number: 1.94
+	>>> Event 213000000 --- Current (photons/mm2): 0 --- Average counts number: 1.95
+	>>> Event 214000000 --- Current (photons/mm2): 0 --- Average counts number: 1.95
+	>>> Event 215000000 --- Current (photons/mm2): 0 --- Average counts number: 1.96
+	>>> Event 216000000 --- Current (photons/mm2): 0 --- Average counts number: 1.97
+	>>> Event 217000000 --- Current (photons/mm2): 0 --- Average counts number: 1.98
+	>>> Event 218000000 --- Current (photons/mm2): 0 --- Average counts number: 1.99
+	>>> Event 219000000 --- Current (photons/mm2): 0 --- Average counts number: 2
+	>>> Event 220000000 --- Current (photons/mm2): 0 --- Average counts number: 2.01
+	>>> Event 221000000 --- Current (photons/mm2): 0 --- Average counts number: 2.02
+	>>> Event 222000000 --- Current (photons/mm2): 0 --- Average counts number: 2.03
+	>>> Event 223000000 --- Current (photons/mm2): 0 --- Average counts number: 2.04
+	>>> Event 224000000 --- Current (photons/mm2): 0 --- Average counts number: 2.05
+	>>> Event 225000000 --- Current (photons/mm2): 0 --- Average counts number: 2.06
+	>>> Event 226000000 --- Current (photons/mm2): 0 --- Average counts number: 2.06
+	>>> Event 227000000 --- Current (photons/mm2): 0 --- Average counts number: 2.07
+	>>> Event 228000000 --- Current (photons/mm2): 0 --- Average counts number: 2.08
+	>>> Event 229000000 --- Current (photons/mm2): 0 --- Average counts number: 2.09
+	>>> Event 230000000 --- Current (photons/mm2): 0 --- Average counts number: 2.1
+	>>> Event 231000000 --- Current (photons/mm2): 0 --- Average counts number: 2.11
+	>>> Event 232000000 --- Current (photons/mm2): 0 --- Average counts number: 2.12
+	>>> Event 233000000 --- Current (photons/mm2): 0 --- Average counts number: 2.13
+	>>> Event 234000000 --- Current (photons/mm2): 0 --- Average counts number: 2.14
+	>>> Event 235000000 --- Current (photons/mm2): 0 --- Average counts number: 2.15
+	>>> Event 236000000 --- Current (photons/mm2): 0 --- Average counts number: 2.16
+	>>> Event 237000000 --- Current (photons/mm2): 0 --- Average counts number: 2.17
+	>>> Event 238000000 --- Current (photons/mm2): 0 --- Average counts number: 2.18
+	>>> Event 239000000 --- Current (photons/mm2): 0 --- Average counts number: 2.19
+	>>> Event 240000000 --- Current (photons/mm2): 0 --- Average counts number: 2.19
+	>>> Event 241000000 --- Current (photons/mm2): 0 --- Average counts number: 2.2
+	>>> Event 242000000 --- Current (photons/mm2): 0 --- Average counts number: 2.21
+	>>> Event 243000000 --- Current (photons/mm2): 0 --- Average counts number: 2.22
+	>>> Event 244000000 --- Current (photons/mm2): 0 --- Average counts number: 2.23
+	>>> Event 245000000 --- Current (photons/mm2): 0 --- Average counts number: 2.24
+	>>> Event 246000000 --- Current (photons/mm2): 0 --- Average counts number: 2.25
+	>>> Event 247000000 --- Current (photons/mm2): 0 --- Average counts number: 2.26
+	>>> Event 248000000 --- Current (photons/mm2): 0 --- Average counts number: 2.27
+	>>> Event 249000000 --- Current (photons/mm2): 0 --- Average counts number: 2.28
+	>>> Event 250000000 --- Current (photons/mm2): 0 --- Average counts number: 2.28
+	>>> Event 251000000 --- Current (photons/mm2): 0 --- Average counts number: 2.29
+	>>> Event 252000000 --- Current (photons/mm2): 0 --- Average counts number: 2.3
+	>>> Event 253000000 --- Current (photons/mm2): 0 --- Average counts number: 2.31
+	>>> Event 254000000 --- Current (photons/mm2): 0 --- Average counts number: 2.32
+	>>> Event 255000000 --- Current (photons/mm2): 0 --- Average counts number: 2.33
+	>>> Event 256000000 --- Current (photons/mm2): 0 --- Average counts number: 2.34
+	>>> Event 257000000 --- Current (photons/mm2): 0 --- Average counts number: 2.35
+	>>> Event 258000000 --- Current (photons/mm2): 0 --- Average counts number: 2.36
+	>>> Event 259000000 --- Current (photons/mm2): 0 --- Average counts number: 2.37
+	>>> Event 260000000 --- Current (photons/mm2): 0 --- Average counts number: 2.38
+	>>> Event 261000000 --- Current (photons/mm2): 0 --- Average counts number: 2.38
+	>>> Event 262000000 --- Current (photons/mm2): 0 --- Average counts number: 2.39
+	>>> Event 263000000 --- Current (photons/mm2): 0 --- Average counts number: 2.4
+	>>> Event 264000000 --- Current (photons/mm2): 0 --- Average counts number: 2.41
+	>>> Event 265000000 --- Current (photons/mm2): 0 --- Average counts number: 2.42
+	>>> Event 266000000 --- Current (photons/mm2): 0 --- Average counts number: 2.43
+	>>> Event 267000000 --- Current (photons/mm2): 0 --- Average counts number: 2.44
+	>>> Event 268000000 --- Current (photons/mm2): 0 --- Average counts number: 2.45
+	>>> Event 269000000 --- Current (photons/mm2): 0 --- Average counts number: 2.46
+	>>> Event 270000000 --- Current (photons/mm2): 0 --- Average counts number: 2.47
+	>>> Event 271000000 --- Current (photons/mm2): 0 --- Average counts number: 2.48
+	>>> Event 272000000 --- Current (photons/mm2): 0 --- Average counts number: 2.49
+	>>> Event 273000000 --- Current (photons/mm2): 0 --- Average counts number: 2.49
+	>>> Event 274000000 --- Current (photons/mm2): 0 --- Average counts number: 2.5
+	>>> Event 275000000 --- Current (photons/mm2): 0 --- Average counts number: 2.51
+	>>> Event 276000000 --- Current (photons/mm2): 0 --- Average counts number: 2.52
+	>>> Event 277000000 --- Current (photons/mm2): 0 --- Average counts number: 2.53
+	>>> Event 278000000 --- Current (photons/mm2): 0 --- Average counts number: 2.54
+	>>> Event 279000000 --- Current (photons/mm2): 0 --- Average counts number: 2.55
+	>>> Event 280000000 --- Current (photons/mm2): 0 --- Average counts number: 2.56
+	>>> Event 281000000 --- Current (photons/mm2): 0 --- Average counts number: 2.57
+	>>> Event 282000000 --- Current (photons/mm2): 0 --- Average counts number: 2.57
+	>>> Event 283000000 --- Current (photons/mm2): 0 --- Average counts number: 2.58
+	>>> Event 284000000 --- Current (photons/mm2): 0 --- Average counts number: 2.59
+	>>> Event 285000000 --- Current (photons/mm2): 0 --- Average counts number: 2.6
+	>>> Event 286000000 --- Current (photons/mm2): 0 --- Average counts number: 2.61
+	>>> Event 287000000 --- Current (photons/mm2): 0 --- Average counts number: 2.62
+	>>> Event 288000000 --- Current (photons/mm2): 0 --- Average counts number: 2.63
+	>>> Event 289000000 --- Current (photons/mm2): 0 --- Average counts number: 2.64
+	>>> Event 290000000 --- Current (photons/mm2): 0 --- Average counts number: 2.65
+	>>> Event 291000000 --- Current (photons/mm2): 0 --- Average counts number: 2.66
+	>>> Event 292000000 --- Current (photons/mm2): 0 --- Average counts number: 2.67
+	>>> Event 293000000 --- Current (photons/mm2): 0 --- Average counts number: 2.68
+	>>> Event 294000000 --- Current (photons/mm2): 0 --- Average counts number: 2.69
+	>>> Event 295000000 --- Current (photons/mm2): 0 --- Average counts number: 2.7
+	>>> Event 296000000 --- Current (photons/mm2): 0 --- Average counts number: 2.7
+	>>> Event 297000000 --- Current (photons/mm2): 0 --- Average counts number: 2.71
+	>>> Event 298000000 --- Current (photons/mm2): 0 --- Average counts number: 2.72
+	>>> Event 299000000 --- Current (photons/mm2): 0 --- Average counts number: 2.73
+	>>> Event 300000000 --- Current (photons/mm2): 0 --- Average counts number: 2.74
+	>>> Event 301000000 --- Current (photons/mm2): 0 --- Average counts number: 2.75
+	>>> Event 302000000 --- Current (photons/mm2): 0 --- Average counts number: 2.76
+	>>> Event 303000000 --- Current (photons/mm2): 0 --- Average counts number: 2.77
+	>>> Event 304000000 --- Current (photons/mm2): 0 --- Average counts number: 2.78
+	>>> Event 305000000 --- Current (photons/mm2): 0 --- Average counts number: 2.79
+	>>> Event 306000000 --- Current (photons/mm2): 0 --- Average counts number: 2.8
+	>>> Event 307000000 --- Current (photons/mm2): 0 --- Average counts number: 2.81
+	>>> Event 308000000 --- Current (photons/mm2): 0 --- Average counts number: 2.82
+	>>> Event 309000000 --- Current (photons/mm2): 0 --- Average counts number: 2.83
+	>>> Event 310000000 --- Current (photons/mm2): 0 --- Average counts number: 2.83
+	>>> Event 311000000 --- Current (photons/mm2): 0 --- Average counts number: 2.84
+	>>> Event 312000000 --- Current (photons/mm2): 0 --- Average counts number: 2.85
+	>>> Event 313000000 --- Current (photons/mm2): 0 --- Average counts number: 2.86
+	>>> Event 314000000 --- Current (photons/mm2): 0 --- Average counts number: 2.87
+	>>> Event 315000000 --- Current (photons/mm2): 0 --- Average counts number: 2.88
+	>>> Event 316000000 --- Current (photons/mm2): 0 --- Average counts number: 2.89
+	>>> Event 317000000 --- Current (photons/mm2): 0 --- Average counts number: 2.9
+	>>> Event 318000000 --- Current (photons/mm2): 0 --- Average counts number: 2.91
+	>>> Event 319000000 --- Current (photons/mm2): 0 --- Average counts number: 2.92
+	>>> Event 320000000 --- Current (photons/mm2): 0 --- Average counts number: 2.93
+	>>> Event 321000000 --- Current (photons/mm2): 0 --- Average counts number: 2.93
+	>>> Event 322000000 --- Current (photons/mm2): 0 --- Average counts number: 2.94
+	>>> Event 323000000 --- Current (photons/mm2): 0 --- Average counts number: 2.95
+	>>> Event 324000000 --- Current (photons/mm2): 0 --- Average counts number: 2.96
+	>>> Event 325000000 --- Current (photons/mm2): 0 --- Average counts number: 2.97
+	>>> Event 326000000 --- Current (photons/mm2): 0 --- Average counts number: 2.98
+	>>> Event 327000000 --- Current (photons/mm2): 0 --- Average counts number: 2.99
+	>>> Event 328000000 --- Current (photons/mm2): 0 --- Average counts number: 3
+	>>> Event 329000000 --- Current (photons/mm2): 0 --- Average counts number: 3
+	>>> Event 330000000 --- Current (photons/mm2): 0 --- Average counts number: 3.01
+	>>> Event 331000000 --- Current (photons/mm2): 0 --- Average counts number: 3.02
+	>>> Event 332000000 --- Current (photons/mm2): 0 --- Average counts number: 3.03
+	>>> Event 333000000 --- Current (photons/mm2): 0 --- Average counts number: 3.04
+	>>> Event 334000000 --- Current (photons/mm2): 0 --- Average counts number: 3.05
+	>>> Event 335000000 --- Current (photons/mm2): 0 --- Average counts number: 3.06
+	>>> Event 336000000 --- Current (photons/mm2): 0 --- Average counts number: 3.07
+	>>> Event 337000000 --- Current (photons/mm2): 0 --- Average counts number: 3.08
+	>>> Event 338000000 --- Current (photons/mm2): 0 --- Average counts number: 3.08
+	>>> Event 339000000 --- Current (photons/mm2): 0 --- Average counts number: 3.09
+	>>> Event 340000000 --- Current (photons/mm2): 0 --- Average counts number: 3.1
+	>>> Event 341000000 --- Current (photons/mm2): 0 --- Average counts number: 3.11
+	>>> Event 342000000 --- Current (photons/mm2): 0 --- Average counts number: 3.12
+	>>> Event 343000000 --- Current (photons/mm2): 0 --- Average counts number: 3.13
+	>>> Event 344000000 --- Current (photons/mm2): 0 --- Average counts number: 3.14
+	>>> Event 345000000 --- Current (photons/mm2): 0 --- Average counts number: 3.15
+	>>> Event 346000000 --- Current (photons/mm2): 0 --- Average counts number: 3.16
+	>>> Event 347000000 --- Current (photons/mm2): 0 --- Average counts number: 3.17
+	>>> Event 348000000 --- Current (photons/mm2): 0 --- Average counts number: 3.18
+	>>> Event 349000000 --- Current (photons/mm2): 0 --- Average counts number: 3.19
+	>>> Event 350000000 --- Current (photons/mm2): 0 --- Average counts number: 3.19
+	>>> Event 351000000 --- Current (photons/mm2): 0 --- Average counts number: 3.2
+	>>> Event 352000000 --- Current (photons/mm2): 0 --- Average counts number: 3.21
+	>>> Event 353000000 --- Current (photons/mm2): 0 --- Average counts number: 3.22
+	>>> Event 354000000 --- Current (photons/mm2): 0 --- Average counts number: 3.23
+	>>> Event 355000000 --- Current (photons/mm2): 0 --- Average counts number: 3.24
+	>>> Event 356000000 --- Current (photons/mm2): 0 --- Average counts number: 3.25
+	>>> Event 357000000 --- Current (photons/mm2): 0 --- Average counts number: 3.26
+	>>> Event 358000000 --- Current (photons/mm2): 0 --- Average counts number: 3.27
+	>>> Event 359000000 --- Current (photons/mm2): 0 --- Average counts number: 3.28
+	>>> Event 360000000 --- Current (photons/mm2): 0 --- Average counts number: 3.28
+	>>> Event 361000000 --- Current (photons/mm2): 0 --- Average counts number: 3.29
+	>>> Event 362000000 --- Current (photons/mm2): 0 --- Average counts number: 3.3
+	>>> Event 363000000 --- Current (photons/mm2): 0 --- Average counts number: 3.31
+	>>> Event 364000000 --- Current (photons/mm2): 0 --- Average counts number: 3.32
+	>>> Event 365000000 --- Current (photons/mm2): 0 --- Average counts number: 3.33
+	>>> Event 366000000 --- Current (photons/mm2): 0 --- Average counts number: 3.34
+	>>> Event 367000000 --- Current (photons/mm2): 0 --- Average counts number: 3.35
+	>>> Event 368000000 --- Current (photons/mm2): 0 --- Average counts number: 3.36
+	>>> Event 369000000 --- Current (photons/mm2): 0 --- Average counts number: 3.37
+	>>> Event 370000000 --- Current (photons/mm2): 0 --- Average counts number: 3.37
+	>>> Event 371000000 --- Current (photons/mm2): 0 --- Average counts number: 3.38
+	>>> Event 372000000 --- Current (photons/mm2): 0 --- Average counts number: 3.39
+	>>> Event 373000000 --- Current (photons/mm2): 0 --- Average counts number: 3.4
+	>>> Event 374000000 --- Current (photons/mm2): 0 --- Average counts number: 3.41
+	>>> Event 375000000 --- Current (photons/mm2): 0 --- Average counts number: 3.42
+	>>> Event 376000000 --- Current (photons/mm2): 0 --- Average counts number: 3.43
+	>>> Event 377000000 --- Current (photons/mm2): 0 --- Average counts number: 3.44
+	>>> Event 378000000 --- Current (photons/mm2): 0 --- Average counts number: 3.45
+	>>> Event 379000000 --- Current (photons/mm2): 0 --- Average counts number: 3.46
+	>>> Event 380000000 --- Current (photons/mm2): 0 --- Average counts number: 3.46
+	>>> Event 381000000 --- Current (photons/mm2): 0 --- Average counts number: 3.47
+	>>> Event 382000000 --- Current (photons/mm2): 0 --- Average counts number: 3.48
+	>>> Event 383000000 --- Current (photons/mm2): 0 --- Average counts number: 3.49
+	>>> Event 384000000 --- Current (photons/mm2): 0 --- Average counts number: 3.5
+	>>> Event 385000000 --- Current (photons/mm2): 0 --- Average counts number: 3.51
+	>>> Event 386000000 --- Current (photons/mm2): 0 --- Average counts number: 3.52
+	>>> Event 387000000 --- Current (photons/mm2): 0 --- Average counts number: 3.53
+	>>> Event 388000000 --- Current (photons/mm2): 0 --- Average counts number: 3.54
+	>>> Event 389000000 --- Current (photons/mm2): 0 --- Average counts number: 3.54
+	>>> Event 390000000 --- Current (photons/mm2): 0 --- Average counts number: 3.55
+	>>> Event 391000000 --- Current (photons/mm2): 0 --- Average counts number: 3.56
+	>>> Event 392000000 --- Current (photons/mm2): 0 --- Average counts number: 3.57
+	>>> Event 393000000 --- Current (photons/mm2): 0 --- Average counts number: 3.58
+	>>> Event 394000000 --- Current (photons/mm2): 0 --- Average counts number: 3.59
+	>>> Event 395000000 --- Current (photons/mm2): 0 --- Average counts number: 3.6
+	>>> Event 396000000 --- Current (photons/mm2): 0 --- Average counts number: 3.61
+	>>> Event 397000000 --- Current (photons/mm2): 0 --- Average counts number: 3.62
+	>>> Event 398000000 --- Current (photons/mm2): 0 --- Average counts number: 3.63
+	>>> Event 399000000 --- Current (photons/mm2): 0 --- Average counts number: 3.64
+	>>> Event 400000000 --- Current (photons/mm2): 0 --- Average counts number: 3.65
+	>>> Event 401000000 --- Current (photons/mm2): 0 --- Average counts number: 3.65
+	>>> Event 402000000 --- Current (photons/mm2): 0 --- Average counts number: 3.66
+	>>> Event 403000000 --- Current (photons/mm2): 0 --- Average counts number: 3.67
+	>>> Event 404000000 --- Current (photons/mm2): 0 --- Average counts number: 3.68
+	>>> Event 405000000 --- Current (photons/mm2): 0 --- Average counts number: 3.69
+	>>> Event 406000000 --- Current (photons/mm2): 0 --- Average counts number: 3.7
+	>>> Event 407000000 --- Current (photons/mm2): 0 --- Average counts number: 3.71
+	>>> Event 408000000 --- Current (photons/mm2): 0 --- Average counts number: 3.72
+	>>> Event 409000000 --- Current (photons/mm2): 0 --- Average counts number: 3.73
+	>>> Event 410000000 --- Current (photons/mm2): 0 --- Average counts number: 3.73
+	>>> Event 411000000 --- Current (photons/mm2): 0 --- Average counts number: 3.74
+	>>> Event 412000000 --- Current (photons/mm2): 0 --- Average counts number: 3.75
+	>>> Event 413000000 --- Current (photons/mm2): 0 --- Average counts number: 3.76
+	>>> Event 414000000 --- Current (photons/mm2): 0 --- Average counts number: 3.77
+	>>> Event 415000000 --- Current (photons/mm2): 0 --- Average counts number: 3.78
+	>>> Event 416000000 --- Current (photons/mm2): 0 --- Average counts number: 3.79
+	>>> Event 417000000 --- Current (photons/mm2): 0 --- Average counts number: 3.8
+	>>> Event 418000000 --- Current (photons/mm2): 0 --- Average counts number: 3.81
+	>>> Event 419000000 --- Current (photons/mm2): 0 --- Average counts number: 3.82
+	>>> Event 420000000 --- Current (photons/mm2): 0 --- Average counts number: 3.83
+	>>> Event 421000000 --- Current (photons/mm2): 0 --- Average counts number: 3.83
+	>>> Event 422000000 --- Current (photons/mm2): 0 --- Average counts number: 3.84
+	>>> Event 423000000 --- Current (photons/mm2): 0 --- Average counts number: 3.85
+	>>> Event 424000000 --- Current (photons/mm2): 0 --- Average counts number: 3.86
+	>>> Event 425000000 --- Current (photons/mm2): 0 --- Average counts number: 3.87
+	>>> Event 426000000 --- Current (photons/mm2): 0 --- Average counts number: 3.88
+	>>> Event 427000000 --- Current (photons/mm2): 0 --- Average counts number: 3.89
+	>>> Event 428000000 --- Current (photons/mm2): 0 --- Average counts number: 3.9
+	>>> Event 429000000 --- Current (photons/mm2): 0 --- Average counts number: 3.91
+	>>> Event 430000000 --- Current (photons/mm2): 0 --- Average counts number: 3.92
+	>>> Event 431000000 --- Current (photons/mm2): 0 --- Average counts number: 3.93
+	>>> Event 432000000 --- Current (photons/mm2): 0 --- Average counts number: 3.94
+	>>> Event 433000000 --- Current (photons/mm2): 0 --- Average counts number: 3.95
+	>>> Event 434000000 --- Current (photons/mm2): 0 --- Average counts number: 3.95
+	>>> Event 435000000 --- Current (photons/mm2): 0 --- Average counts number: 3.96
+	>>> Event 436000000 --- Current (photons/mm2): 0 --- Average counts number: 3.97
+	>>> Event 437000000 --- Current (photons/mm2): 0 --- Average counts number: 3.98
+	>>> Event 438000000 --- Current (photons/mm2): 0 --- Average counts number: 3.99
+	>>> Event 439000000 --- Current (photons/mm2): 0 --- Average counts number: 4
+	>>> Event 440000000 --- Current (photons/mm2): 0 --- Average counts number: 4.01
+	>>> Event 441000000 --- Current (photons/mm2): 0 --- Average counts number: 4.02
+	>>> Event 442000000 --- Current (photons/mm2): 0 --- Average counts number: 4.03
+	>>> Event 443000000 --- Current (photons/mm2): 0 --- Average counts number: 4.04
+	>>> Event 444000000 --- Current (photons/mm2): 0 --- Average counts number: 4.04
+	>>> Event 445000000 --- Current (photons/mm2): 0 --- Average counts number: 4.05
+	>>> Event 446000000 --- Current (photons/mm2): 0 --- Average counts number: 4.06
+	>>> Event 447000000 --- Current (photons/mm2): 0 --- Average counts number: 4.07
+	>>> Event 448000000 --- Current (photons/mm2): 0 --- Average counts number: 4.08
+	>>> Event 449000000 --- Current (photons/mm2): 0 --- Average counts number: 4.09
+	>>> Event 450000000 --- Current (photons/mm2): 0 --- Average counts number: 4.1
+	>>> Event 451000000 --- Current (photons/mm2): 0 --- Average counts number: 4.11
+	>>> Event 452000000 --- Current (photons/mm2): 0 --- Average counts number: 4.12
+	>>> Event 453000000 --- Current (photons/mm2): 0 --- Average counts number: 4.12
+	>>> Event 454000000 --- Current (photons/mm2): 0 --- Average counts number: 4.13
+	>>> Event 455000000 --- Current (photons/mm2): 0 --- Average counts number: 4.14
+	>>> Event 456000000 --- Current (photons/mm2): 0 --- Average counts number: 4.15
+	>>> Event 457000000 --- Current (photons/mm2): 0 --- Average counts number: 4.16
+	>>> Event 458000000 --- Current (photons/mm2): 0 --- Average counts number: 4.17
+	>>> Event 459000000 --- Current (photons/mm2): 0 --- Average counts number: 4.18
+	>>> Event 460000000 --- Current (photons/mm2): 0 --- Average counts number: 4.19
+	>>> Event 461000000 --- Current (photons/mm2): 0 --- Average counts number: 4.2
+	>>> Event 462000000 --- Current (photons/mm2): 0 --- Average counts number: 4.21
+	>>> Event 463000000 --- Current (photons/mm2): 0 --- Average counts number: 4.22
+	>>> Event 464000000 --- Current (photons/mm2): 0 --- Average counts number: 4.22
+	>>> Event 465000000 --- Current (photons/mm2): 0 --- Average counts number: 4.23
+	>>> Event 466000000 --- Current (photons/mm2): 0 --- Average counts number: 4.24
+	>>> Event 467000000 --- Current (photons/mm2): 0 --- Average counts number: 4.25
+	>>> Event 468000000 --- Current (photons/mm2): 0 --- Average counts number: 4.26
+	>>> Event 469000000 --- Current (photons/mm2): 0 --- Average counts number: 4.27
+	>>> Event 470000000 --- Current (photons/mm2): 0 --- Average counts number: 4.28
+	>>> Event 471000000 --- Current (photons/mm2): 0 --- Average counts number: 4.29
+	>>> Event 472000000 --- Current (photons/mm2): 0 --- Average counts number: 4.3
+	>>> Event 473000000 --- Current (photons/mm2): 0 --- Average counts number: 4.31
+	>>> Event 474000000 --- Current (photons/mm2): 0 --- Average counts number: 4.32
+	>>> Event 475000000 --- Current (photons/mm2): 0 --- Average counts number: 4.33
+	>>> Event 476000000 --- Current (photons/mm2): 0 --- Average counts number: 4.34
+	>>> Event 477000000 --- Current (photons/mm2): 0 --- Average counts number: 4.35
+	>>> Event 478000000 --- Current (photons/mm2): 0 --- Average counts number: 4.36
+	>>> Event 479000000 --- Current (photons/mm2): 0 --- Average counts number: 4.36
+	>>> Event 480000000 --- Current (photons/mm2): 0 --- Average counts number: 4.37
+	>>> Event 481000000 --- Current (photons/mm2): 0 --- Average counts number: 4.38
+	>>> Event 482000000 --- Current (photons/mm2): 0 --- Average counts number: 4.39
+	>>> Event 483000000 --- Current (photons/mm2): 0 --- Average counts number: 4.4
+	>>> Event 484000000 --- Current (photons/mm2): 0 --- Average counts number: 4.41
+	>>> Event 485000000 --- Current (photons/mm2): 0 --- Average counts number: 4.42
+	>>> Event 486000000 --- Current (photons/mm2): 0 --- Average counts number: 4.43
+	>>> Event 487000000 --- Current (photons/mm2): 0 --- Average counts number: 4.44
+	>>> Event 488000000 --- Current (photons/mm2): 0 --- Average counts number: 4.45
+	>>> Event 489000000 --- Current (photons/mm2): 0 --- Average counts number: 4.45
+	>>> Event 490000000 --- Current (photons/mm2): 0 --- Average counts number: 4.46
+	>>> Event 491000000 --- Current (photons/mm2): 0 --- Average counts number: 4.47
+	>>> Event 492000000 --- Current (photons/mm2): 0 --- Average counts number: 4.48
+	>>> Event 493000000 --- Current (photons/mm2): 0 --- Average counts number: 4.49
+	>>> Event 494000000 --- Current (photons/mm2): 0 --- Average counts number: 4.5
+	>>> Event 495000000 --- Current (photons/mm2): 0 --- Average counts number: 4.51
+	>>> Event 496000000 --- Current (photons/mm2): 0 --- Average counts number: 4.52
+	>>> Event 497000000 --- Current (photons/mm2): 0 --- Average counts number: 4.53
+	>>> Event 498000000 --- Current (photons/mm2): 0 --- Average counts number: 4.54
+	>>> Event 499000000 --- Current (photons/mm2): 0 --- Average counts number: 4.54
+	>>> Event 500000000 --- Current (photons/mm2): 0 --- Average counts number: 4.55
+	>>> Event 501000000 --- Current (photons/mm2): 0 --- Average counts number: 4.56
+	>>> Event 502000000 --- Current (photons/mm2): 0 --- Average counts number: 4.57
+	>>> Event 503000000 --- Current (photons/mm2): 0 --- Average counts number: 4.58
+	>>> Event 504000000 --- Current (photons/mm2): 0 --- Average counts number: 4.59
+	>>> Event 505000000 --- Current (photons/mm2): 0 --- Average counts number: 4.6
+	>>> Event 506000000 --- Current (photons/mm2): 0 --- Average counts number: 4.61
+	>>> Event 507000000 --- Current (photons/mm2): 0 --- Average counts number: 4.62
+	>>> Event 508000000 --- Current (photons/mm2): 0 --- Average counts number: 4.63
+	>>> Event 509000000 --- Current (photons/mm2): 0 --- Average counts number: 4.64
+	>>> Event 510000000 --- Current (photons/mm2): 0 --- Average counts number: 4.64
+	>>> Event 511000000 --- Current (photons/mm2): 0 --- Average counts number: 4.65
+	>>> Event 512000000 --- Current (photons/mm2): 0 --- Average counts number: 4.66
+	>>> Event 513000000 --- Current (photons/mm2): 0 --- Average counts number: 4.67
+	>>> Event 514000000 --- Current (photons/mm2): 0 --- Average counts number: 4.68
+	>>> Event 515000000 --- Current (photons/mm2): 0 --- Average counts number: 4.69
+	>>> Event 516000000 --- Current (photons/mm2): 0 --- Average counts number: 4.7
+	>>> Event 517000000 --- Current (photons/mm2): 0 --- Average counts number: 4.71
+	>>> Event 518000000 --- Current (photons/mm2): 0 --- Average counts number: 4.72
+	>>> Event 519000000 --- Current (photons/mm2): 0 --- Average counts number: 4.73
+	>>> Event 520000000 --- Current (photons/mm2): 0 --- Average counts number: 4.74
+	>>> Event 521000000 --- Current (photons/mm2): 0 --- Average counts number: 4.74
+	>>> Event 522000000 --- Current (photons/mm2): 0 --- Average counts number: 4.75
+	>>> Event 523000000 --- Current (photons/mm2): 0 --- Average counts number: 4.76
+	>>> Event 524000000 --- Current (photons/mm2): 0 --- Average counts number: 4.77
+	>>> Event 525000000 --- Current (photons/mm2): 0 --- Average counts number: 4.78
+	>>> Event 526000000 --- Current (photons/mm2): 0 --- Average counts number: 4.79
+	>>> Event 527000000 --- Current (photons/mm2): 0 --- Average counts number: 4.8
+	>>> Event 528000000 --- Current (photons/mm2): 0 --- Average counts number: 4.81
+	>>> Event 529000000 --- Current (photons/mm2): 0 --- Average counts number: 4.82
+	>>> Event 530000000 --- Current (photons/mm2): 0 --- Average counts number: 4.82
+	>>> Event 531000000 --- Current (photons/mm2): 0 --- Average counts number: 4.83
+	>>> Event 532000000 --- Current (photons/mm2): 0 --- Average counts number: 4.84
+	>>> Event 533000000 --- Current (photons/mm2): 0 --- Average counts number: 4.85
+	>>> Event 534000000 --- Current (photons/mm2): 0 --- Average counts number: 4.86
+	>>> Event 535000000 --- Current (photons/mm2): 0 --- Average counts number: 4.87
+	>>> Event 536000000 --- Current (photons/mm2): 0 --- Average counts number: 4.88
+	>>> Event 537000000 --- Current (photons/mm2): 0 --- Average counts number: 4.89
+	>>> Event 538000000 --- Current (photons/mm2): 0 --- Average counts number: 4.9
+	>>> Event 539000000 --- Current (photons/mm2): 0 --- Average counts number: 4.91
+	>>> Event 540000000 --- Current (photons/mm2): 0 --- Average counts number: 4.92
+	>>> Event 541000000 --- Current (photons/mm2): 0 --- Average counts number: 4.93
+	>>> Event 542000000 --- Current (photons/mm2): 0 --- Average counts number: 4.94
+	>>> Event 543000000 --- Current (photons/mm2): 0 --- Average counts number: 4.95
+	>>> Event 544000000 --- Current (photons/mm2): 0 --- Average counts number: 4.95
+	>>> Event 545000000 --- Current (photons/mm2): 0 --- Average counts number: 4.96
+	>>> Event 546000000 --- Current (photons/mm2): 0 --- Average counts number: 4.97
+	>>> Event 547000000 --- Current (photons/mm2): 0 --- Average counts number: 4.98
+	>>> Event 548000000 --- Current (photons/mm2): 0 --- Average counts number: 4.99
+	>>> Event 549000000 --- Current (photons/mm2): 0 --- Average counts number: 5
+	>>> Event 550000000 --- Current (photons/mm2): 0 --- Average counts number: 5.01
+	>>> Event 551000000 --- Current (photons/mm2): 0 --- Average counts number: 5.02
+	>>> Event 552000000 --- Current (photons/mm2): 0 --- Average counts number: 5.03
+	>>> Event 553000000 --- Current (photons/mm2): 0 --- Average counts number: 5.04
+	>>> Event 554000000 --- Current (photons/mm2): 0 --- Average counts number: 5.05
+	>>> Event 555000000 --- Current (photons/mm2): 0 --- Average counts number: 5.06
+	>>> Event 556000000 --- Current (photons/mm2): 0 --- Average counts number: 5.07
+	>>> Event 557000000 --- Current (photons/mm2): 0 --- Average counts number: 5.08
+	>>> Event 558000000 --- Current (photons/mm2): 0 --- Average counts number: 5.08
+	>>> Event 559000000 --- Current (photons/mm2): 0 --- Average counts number: 5.09
+	>>> Event 560000000 --- Current (photons/mm2): 0 --- Average counts number: 5.1
+	>>> Event 561000000 --- Current (photons/mm2): 0 --- Average counts number: 5.11
+	>>> Event 562000000 --- Current (photons/mm2): 0 --- Average counts number: 5.12
+	>>> Event 563000000 --- Current (photons/mm2): 0 --- Average counts number: 5.13
+	>>> Event 564000000 --- Current (photons/mm2): 0 --- Average counts number: 5.14
+	>>> Event 565000000 --- Current (photons/mm2): 0 --- Average counts number: 5.15
+	>>> Event 566000000 --- Current (photons/mm2): 0 --- Average counts number: 5.16
+	>>> Event 567000000 --- Current (photons/mm2): 0 --- Average counts number: 5.17
+	>>> Event 568000000 --- Current (photons/mm2): 0 --- Average counts number: 5.18
+	>>> Event 569000000 --- Current (photons/mm2): 0 --- Average counts number: 5.18
+	>>> Event 570000000 --- Current (photons/mm2): 0 --- Average counts number: 5.19
+	>>> Event 571000000 --- Current (photons/mm2): 0 --- Average counts number: 5.2
+	>>> Event 572000000 --- Current (photons/mm2): 0 --- Average counts number: 5.21
+	>>> Event 573000000 --- Current (photons/mm2): 0 --- Average counts number: 5.22
+	>>> Event 574000000 --- Current (photons/mm2): 0 --- Average counts number: 5.23
+	>>> Event 575000000 --- Current (photons/mm2): 0 --- Average counts number: 5.24
+	>>> Event 576000000 --- Current (photons/mm2): 0 --- Average counts number: 5.25
+	>>> Event 577000000 --- Current (photons/mm2): 0 --- Average counts number: 5.26
+	>>> Event 578000000 --- Current (photons/mm2): 0 --- Average counts number: 5.27
+	>>> Event 579000000 --- Current (photons/mm2): 0 --- Average counts number: 5.28
+	>>> Event 580000000 --- Current (photons/mm2): 0 --- Average counts number: 5.29
+	>>> Event 581000000 --- Current (photons/mm2): 0 --- Average counts number: 5.3
+	>>> Event 582000000 --- Current (photons/mm2): 0 --- Average counts number: 5.3
+	>>> Event 583000000 --- Current (photons/mm2): 0 --- Average counts number: 5.31
+	>>> Event 584000000 --- Current (photons/mm2): 0 --- Average counts number: 5.32
+	>>> Event 585000000 --- Current (photons/mm2): 0 --- Average counts number: 5.33
+	>>> Event 586000000 --- Current (photons/mm2): 0 --- Average counts number: 5.34
+	>>> Event 587000000 --- Current (photons/mm2): 0 --- Average counts number: 5.35
+	>>> Event 588000000 --- Current (photons/mm2): 0 --- Average counts number: 5.36
+	>>> Event 589000000 --- Current (photons/mm2): 0 --- Average counts number: 5.37
+	>>> Event 590000000 --- Current (photons/mm2): 0 --- Average counts number: 5.38
+	>>> Event 591000000 --- Current (photons/mm2): 0 --- Average counts number: 5.39
+	>>> Event 592000000 --- Current (photons/mm2): 0 --- Average counts number: 5.4
+	>>> Event 593000000 --- Current (photons/mm2): 0 --- Average counts number: 5.4
+	>>> Event 594000000 --- Current (photons/mm2): 0 --- Average counts number: 5.41
+	>>> Event 595000000 --- Current (photons/mm2): 0 --- Average counts number: 5.42
+	>>> Event 596000000 --- Current (photons/mm2): 0 --- Average counts number: 5.43
+	>>> Event 597000000 --- Current (photons/mm2): 0 --- Average counts number: 5.44
+	>>> Event 598000000 --- Current (photons/mm2): 0 --- Average counts number: 5.45
+	>>> Event 599000000 --- Current (photons/mm2): 0 --- Average counts number: 5.46
+	>>> Event 600000000 --- Current (photons/mm2): 0 --- Average counts number: 5.47
+	>>> Event 601000000 --- Current (photons/mm2): 0 --- Average counts number: 5.48
+	>>> Event 602000000 --- Current (photons/mm2): 0 --- Average counts number: 5.49
+	>>> Event 603000000 --- Current (photons/mm2): 0 --- Average counts number: 5.49
+	>>> Event 604000000 --- Current (photons/mm2): 0 --- Average counts number: 5.5
+	>>> Event 605000000 --- Current (photons/mm2): 0 --- Average counts number: 5.51
+	>>> Event 606000000 --- Current (photons/mm2): 0 --- Average counts number: 5.52
+	>>> Event 607000000 --- Current (photons/mm2): 0 --- Average counts number: 5.53
+	>>> Event 608000000 --- Current (photons/mm2): 0 --- Average counts number: 5.54
+	>>> Event 609000000 --- Current (photons/mm2): 0 --- Average counts number: 5.55
+	>>> Event 610000000 --- Current (photons/mm2): 0 --- Average counts number: 5.56
+	>>> Event 611000000 --- Current (photons/mm2): 0 --- Average counts number: 5.57
+	>>> Event 612000000 --- Current (photons/mm2): 0 --- Average counts number: 5.58
+	>>> Event 613000000 --- Current (photons/mm2): 0 --- Average counts number: 5.59
+	>>> Event 614000000 --- Current (photons/mm2): 0 --- Average counts number: 5.6
+	>>> Event 615000000 --- Current (photons/mm2): 0 --- Average counts number: 5.61
+	>>> Event 616000000 --- Current (photons/mm2): 0 --- Average counts number: 5.61
+	>>> Event 617000000 --- Current (photons/mm2): 0 --- Average counts number: 5.62
+	>>> Event 618000000 --- Current (photons/mm2): 0 --- Average counts number: 5.63
+	>>> Event 619000000 --- Current (photons/mm2): 0 --- Average counts number: 5.64
+	>>> Event 620000000 --- Current (photons/mm2): 0 --- Average counts number: 5.65
+	>>> Event 621000000 --- Current (photons/mm2): 0 --- Average counts number: 5.66
+	>>> Event 622000000 --- Current (photons/mm2): 0 --- Average counts number: 5.67
+	>>> Event 623000000 --- Current (photons/mm2): 0 --- Average counts number: 5.68
+	>>> Event 624000000 --- Current (photons/mm2): 0 --- Average counts number: 5.69
+	>>> Event 625000000 --- Current (photons/mm2): 0 --- Average counts number: 5.7
+	>>> Event 626000000 --- Current (photons/mm2): 0 --- Average counts number: 5.71
+	>>> Event 627000000 --- Current (photons/mm2): 0 --- Average counts number: 5.72
+	>>> Event 628000000 --- Current (photons/mm2): 0 --- Average counts number: 5.73
+	>>> Event 629000000 --- Current (photons/mm2): 0 --- Average counts number: 5.73
+	>>> Event 630000000 --- Current (photons/mm2): 0 --- Average counts number: 5.74
+	>>> Event 631000000 --- Current (photons/mm2): 0 --- Average counts number: 5.75
+	>>> Event 632000000 --- Current (photons/mm2): 0 --- Average counts number: 5.76
+	>>> Event 633000000 --- Current (photons/mm2): 0 --- Average counts number: 5.77
+	>>> Event 634000000 --- Current (photons/mm2): 0 --- Average counts number: 5.78
+	>>> Event 635000000 --- Current (photons/mm2): 0 --- Average counts number: 5.79
+	>>> Event 636000000 --- Current (photons/mm2): 0 --- Average counts number: 5.8
+	>>> Event 637000000 --- Current (photons/mm2): 0 --- Average counts number: 5.81
+	>>> Event 638000000 --- Current (photons/mm2): 0 --- Average counts number: 5.82
+	>>> Event 639000000 --- Current (photons/mm2): 0 --- Average counts number: 5.82
+	>>> Event 640000000 --- Current (photons/mm2): 0 --- Average counts number: 5.83
+	>>> Event 641000000 --- Current (photons/mm2): 0 --- Average counts number: 5.84
+	>>> Event 642000000 --- Current (photons/mm2): 0 --- Average counts number: 5.85
+	>>> Event 643000000 --- Current (photons/mm2): 0 --- Average counts number: 5.86
+	>>> Event 644000000 --- Current (photons/mm2): 0 --- Average counts number: 5.87
+	>>> Event 645000000 --- Current (photons/mm2): 0 --- Average counts number: 5.88
+	>>> Event 646000000 --- Current (photons/mm2): 0 --- Average counts number: 5.89
+	>>> Event 647000000 --- Current (photons/mm2): 0 --- Average counts number: 5.89
+	>>> Event 648000000 --- Current (photons/mm2): 0 --- Average counts number: 5.9
+	>>> Event 649000000 --- Current (photons/mm2): 0 --- Average counts number: 5.91
+	>>> Event 650000000 --- Current (photons/mm2): 0 --- Average counts number: 5.92
+	>>> Event 651000000 --- Current (photons/mm2): 0 --- Average counts number: 5.93
+	>>> Event 652000000 --- Current (photons/mm2): 0 --- Average counts number: 5.94
+	>>> Event 653000000 --- Current (photons/mm2): 0 --- Average counts number: 5.95
+	>>> Event 654000000 --- Current (photons/mm2): 0 --- Average counts number: 5.96
+	>>> Event 655000000 --- Current (photons/mm2): 0 --- Average counts number: 5.97
+	>>> Event 656000000 --- Current (photons/mm2): 0 --- Average counts number: 5.98
+	>>> Event 657000000 --- Current (photons/mm2): 0 --- Average counts number: 5.98
+	>>> Event 658000000 --- Current (photons/mm2): 0 --- Average counts number: 5.99
+	>>> Event 659000000 --- Current (photons/mm2): 0 --- Average counts number: 6
+	>>> Event 660000000 --- Current (photons/mm2): 0 --- Average counts number: 6.01
+	>>> Event 661000000 --- Current (photons/mm2): 0 --- Average counts number: 6.02
+	>>> Event 662000000 --- Current (photons/mm2): 0 --- Average counts number: 6.03
+	>>> Event 663000000 --- Current (photons/mm2): 0 --- Average counts number: 6.04
+	>>> Event 664000000 --- Current (photons/mm2): 0 --- Average counts number: 6.05
+	>>> Event 665000000 --- Current (photons/mm2): 0 --- Average counts number: 6.06
+	>>> Event 666000000 --- Current (photons/mm2): 0 --- Average counts number: 6.07
+	>>> Event 667000000 --- Current (photons/mm2): 0 --- Average counts number: 6.08
+	>>> Event 668000000 --- Current (photons/mm2): 0 --- Average counts number: 6.09
+	>>> Event 669000000 --- Current (photons/mm2): 0 --- Average counts number: 6.1
+	>>> Event 670000000 --- Current (photons/mm2): 0 --- Average counts number: 6.1
+	>>> Event 671000000 --- Current (photons/mm2): 0 --- Average counts number: 6.11
+	>>> Event 672000000 --- Current (photons/mm2): 0 --- Average counts number: 6.12
+	>>> Event 673000000 --- Current (photons/mm2): 0 --- Average counts number: 6.13
+	>>> Event 674000000 --- Current (photons/mm2): 0 --- Average counts number: 6.14
+	>>> Event 675000000 --- Current (photons/mm2): 0 --- Average counts number: 6.15
+	>>> Event 676000000 --- Current (photons/mm2): 0 --- Average counts number: 6.16
+	>>> Event 677000000 --- Current (photons/mm2): 0 --- Average counts number: 6.17
+	>>> Event 678000000 --- Current (photons/mm2): 0 --- Average counts number: 6.18
+	>>> Event 679000000 --- Current (photons/mm2): 0 --- Average counts number: 6.19
+	>>> Event 680000000 --- Current (photons/mm2): 0 --- Average counts number: 6.2
+	>>> Event 681000000 --- Current (photons/mm2): 0 --- Average counts number: 6.21
+	>>> Event 682000000 --- Current (photons/mm2): 0 --- Average counts number: 6.21
+	>>> Event 683000000 --- Current (photons/mm2): 0 --- Average counts number: 6.22
+	>>> Event 684000000 --- Current (photons/mm2): 0 --- Average counts number: 6.23
+	>>> Event 685000000 --- Current (photons/mm2): 0 --- Average counts number: 6.24
+	>>> Event 686000000 --- Current (photons/mm2): 0 --- Average counts number: 6.25
+	>>> Event 687000000 --- Current (photons/mm2): 0 --- Average counts number: 6.26
+	>>> Event 688000000 --- Current (photons/mm2): 0 --- Average counts number: 6.27
+	>>> Event 689000000 --- Current (photons/mm2): 0 --- Average counts number: 6.28
+	>>> Event 690000000 --- Current (photons/mm2): 0 --- Average counts number: 6.29
+	>>> Event 691000000 --- Current (photons/mm2): 0 --- Average counts number: 6.29
+	>>> Event 692000000 --- Current (photons/mm2): 0 --- Average counts number: 6.3
+	>>> Event 693000000 --- Current (photons/mm2): 0 --- Average counts number: 6.31
+	>>> Event 694000000 --- Current (photons/mm2): 0 --- Average counts number: 6.32
+	>>> Event 695000000 --- Current (photons/mm2): 0 --- Average counts number: 6.33
+	>>> Event 696000000 --- Current (photons/mm2): 0 --- Average counts number: 6.34
+	>>> Event 697000000 --- Current (photons/mm2): 0 --- Average counts number: 6.35
+	>>> Event 698000000 --- Current (photons/mm2): 0 --- Average counts number: 6.36
+	>>> Event 699000000 --- Current (photons/mm2): 0 --- Average counts number: 6.37
+	>>> Event 700000000 --- Current (photons/mm2): 0 --- Average counts number: 6.38
+	>>> Event 701000000 --- Current (photons/mm2): 0 --- Average counts number: 6.38
+	>>> Event 702000000 --- Current (photons/mm2): 0 --- Average counts number: 6.39
+	>>> Event 703000000 --- Current (photons/mm2): 0 --- Average counts number: 6.4
+	>>> Event 704000000 --- Current (photons/mm2): 0 --- Average counts number: 6.41
+	>>> Event 705000000 --- Current (photons/mm2): 0 --- Average counts number: 6.42
+	>>> Event 706000000 --- Current (photons/mm2): 0 --- Average counts number: 6.43
+	>>> Event 707000000 --- Current (photons/mm2): 0 --- Average counts number: 6.44
+	>>> Event 708000000 --- Current (photons/mm2): 0 --- Average counts number: 6.45
+	>>> Event 709000000 --- Current (photons/mm2): 0 --- Average counts number: 6.46
+	>>> Event 710000000 --- Current (photons/mm2): 0 --- Average counts number: 6.47
+	>>> Event 711000000 --- Current (photons/mm2): 0 --- Average counts number: 6.48
+	>>> Event 712000000 --- Current (photons/mm2): 0 --- Average counts number: 6.48
+	>>> Event 713000000 --- Current (photons/mm2): 0 --- Average counts number: 6.49
+	>>> Event 714000000 --- Current (photons/mm2): 0 --- Average counts number: 6.5
+	>>> Event 715000000 --- Current (photons/mm2): 0 --- Average counts number: 6.51
+	>>> Event 716000000 --- Current (photons/mm2): 0 --- Average counts number: 6.52
+	>>> Event 717000000 --- Current (photons/mm2): 0 --- Average counts number: 6.53
+	>>> Event 718000000 --- Current (photons/mm2): 0 --- Average counts number: 6.54
+	>>> Event 719000000 --- Current (photons/mm2): 0 --- Average counts number: 6.55
+	>>> Event 720000000 --- Current (photons/mm2): 0 --- Average counts number: 6.56
+	>>> Event 721000000 --- Current (photons/mm2): 0 --- Average counts number: 6.56
+	>>> Event 722000000 --- Current (photons/mm2): 0 --- Average counts number: 6.57
+	>>> Event 723000000 --- Current (photons/mm2): 0 --- Average counts number: 6.58
+	>>> Event 724000000 --- Current (photons/mm2): 0 --- Average counts number: 6.59
+	>>> Event 725000000 --- Current (photons/mm2): 0 --- Average counts number: 6.6
+	>>> Event 726000000 --- Current (photons/mm2): 0 --- Average counts number: 6.61
+	>>> Event 727000000 --- Current (photons/mm2): 0 --- Average counts number: 6.62
+	>>> Event 728000000 --- Current (photons/mm2): 0 --- Average counts number: 6.63
+	>>> Event 729000000 --- Current (photons/mm2): 0 --- Average counts number: 6.63
+	>>> Event 730000000 --- Current (photons/mm2): 0 --- Average counts number: 6.64
+	>>> Event 731000000 --- Current (photons/mm2): 0 --- Average counts number: 6.65
+	>>> Event 732000000 --- Current (photons/mm2): 0 --- Average counts number: 6.66
+	>>> Event 733000000 --- Current (photons/mm2): 0 --- Average counts number: 6.67
+	>>> Event 734000000 --- Current (photons/mm2): 0 --- Average counts number: 6.68
+	>>> Event 735000000 --- Current (photons/mm2): 0 --- Average counts number: 6.69
+	>>> Event 736000000 --- Current (photons/mm2): 0 --- Average counts number: 6.7
+	>>> Event 737000000 --- Current (photons/mm2): 0 --- Average counts number: 6.71
+	>>> Event 738000000 --- Current (photons/mm2): 0 --- Average counts number: 6.72
+	>>> Event 739000000 --- Current (photons/mm2): 0 --- Average counts number: 6.73
+	>>> Event 740000000 --- Current (photons/mm2): 0 --- Average counts number: 6.74
+	>>> Event 741000000 --- Current (photons/mm2): 0 --- Average counts number: 6.75
+	>>> Event 742000000 --- Current (photons/mm2): 0 --- Average counts number: 6.76
+	>>> Event 743000000 --- Current (photons/mm2): 0 --- Average counts number: 6.77
+	>>> Event 744000000 --- Current (photons/mm2): 0 --- Average counts number: 6.78
+	>>> Event 745000000 --- Current (photons/mm2): 0 --- Average counts number: 6.78
+	>>> Event 746000000 --- Current (photons/mm2): 0 --- Average counts number: 6.79
+	>>> Event 747000000 --- Current (photons/mm2): 0 --- Average counts number: 6.8
+	>>> Event 748000000 --- Current (photons/mm2): 0 --- Average counts number: 6.81
+	>>> Event 749000000 --- Current (photons/mm2): 0 --- Average counts number: 6.82
+	>>> Event 750000000 --- Current (photons/mm2): 0 --- Average counts number: 6.83
+	>>> Event 751000000 --- Current (photons/mm2): 0 --- Average counts number: 6.84
+	>>> Event 752000000 --- Current (photons/mm2): 0 --- Average counts number: 6.85
+	>>> Event 753000000 --- Current (photons/mm2): 0 --- Average counts number: 6.86
+	>>> Event 754000000 --- Current (photons/mm2): 0 --- Average counts number: 6.87
+	>>> Event 755000000 --- Current (photons/mm2): 0 --- Average counts number: 6.88
+	>>> Event 756000000 --- Current (photons/mm2): 0 --- Average counts number: 6.89
+	>>> Event 757000000 --- Current (photons/mm2): 0 --- Average counts number: 6.9
+	>>> Event 758000000 --- Current (photons/mm2): 0 --- Average counts number: 6.9
+	>>> Event 759000000 --- Current (photons/mm2): 0 --- Average counts number: 6.91
+	>>> Event 760000000 --- Current (photons/mm2): 0 --- Average counts number: 6.92
+	>>> Event 761000000 --- Current (photons/mm2): 0 --- Average counts number: 6.93
+	>>> Event 762000000 --- Current (photons/mm2): 0 --- Average counts number: 6.94
+	>>> Event 763000000 --- Current (photons/mm2): 0 --- Average counts number: 6.95
+	>>> Event 764000000 --- Current (photons/mm2): 0 --- Average counts number: 6.96
+	>>> Event 765000000 --- Current (photons/mm2): 0 --- Average counts number: 6.97
+	>>> Event 766000000 --- Current (photons/mm2): 0 --- Average counts number: 6.97
+	>>> Event 767000000 --- Current (photons/mm2): 0 --- Average counts number: 6.98
+	>>> Event 768000000 --- Current (photons/mm2): 0 --- Average counts number: 6.99
+	>>> Event 769000000 --- Current (photons/mm2): 0 --- Average counts number: 7
+	>>> Event 770000000 --- Current (photons/mm2): 0 --- Average counts number: 7.01
+	>>> Event 771000000 --- Current (photons/mm2): 0 --- Average counts number: 7.02
+	>>> Event 772000000 --- Current (photons/mm2): 0 --- Average counts number: 7.03
+	>>> Event 773000000 --- Current (photons/mm2): 0 --- Average counts number: 7.04
+	>>> Event 774000000 --- Current (photons/mm2): 0 --- Average counts number: 7.05
+	>>> Event 775000000 --- Current (photons/mm2): 0 --- Average counts number: 7.06
+	>>> Event 776000000 --- Current (photons/mm2): 0 --- Average counts number: 7.07
+	>>> Event 777000000 --- Current (photons/mm2): 0 --- Average counts number: 7.08
+	>>> Event 778000000 --- Current (photons/mm2): 0 --- Average counts number: 7.09
+	>>> Event 779000000 --- Current (photons/mm2): 0 --- Average counts number: 7.09
+	>>> Event 780000000 --- Current (photons/mm2): 0 --- Average counts number: 7.1
+	>>> Event 781000000 --- Current (photons/mm2): 0 --- Average counts number: 7.11
+	>>> Event 782000000 --- Current (photons/mm2): 0 --- Average counts number: 7.12
+	>>> Event 783000000 --- Current (photons/mm2): 0 --- Average counts number: 7.13
+	>>> Event 784000000 --- Current (photons/mm2): 0 --- Average counts number: 7.14
+	>>> Event 785000000 --- Current (photons/mm2): 0 --- Average counts number: 7.15
+	>>> Event 786000000 --- Current (photons/mm2): 0 --- Average counts number: 7.16
+	>>> Event 787000000 --- Current (photons/mm2): 0 --- Average counts number: 7.17
+	>>> Event 788000000 --- Current (photons/mm2): 0 --- Average counts number: 7.18
+	>>> Event 789000000 --- Current (photons/mm2): 0 --- Average counts number: 7.19
+	>>> Event 790000000 --- Current (photons/mm2): 0 --- Average counts number: 7.19
+	>>> Event 791000000 --- Current (photons/mm2): 0 --- Average counts number: 7.2
+	>>> Event 792000000 --- Current (photons/mm2): 0 --- Average counts number: 7.21
+	>>> Event 793000000 --- Current (photons/mm2): 0 --- Average counts number: 7.22
+	>>> Event 794000000 --- Current (photons/mm2): 0 --- Average counts number: 7.23
+	>>> Event 795000000 --- Current (photons/mm2): 0 --- Average counts number: 7.24
+	>>> Event 796000000 --- Current (photons/mm2): 0 --- Average counts number: 7.25
+	>>> Event 797000000 --- Current (photons/mm2): 0 --- Average counts number: 7.26
+	>>> Event 798000000 --- Current (photons/mm2): 0 --- Average counts number: 7.27
+	>>> Event 799000000 --- Current (photons/mm2): 0 --- Average counts number: 7.28
+	>>> Event 800000000 --- Current (photons/mm2): 0 --- Average counts number: 7.29
+	>>> Event 801000000 --- Current (photons/mm2): 0 --- Average counts number: 7.3
+	>>> Event 802000000 --- Current (photons/mm2): 0 --- Average counts number: 7.31
+	>>> Event 803000000 --- Current (photons/mm2): 0 --- Average counts number: 7.31
+	>>> Event 804000000 --- Current (photons/mm2): 0 --- Average counts number: 7.32
+	>>> Event 805000000 --- Current (photons/mm2): 0 --- Average counts number: 7.33
+	>>> Event 806000000 --- Current (photons/mm2): 0 --- Average counts number: 7.34
+	>>> Event 807000000 --- Current (photons/mm2): 0 --- Average counts number: 7.35
+	>>> Event 808000000 --- Current (photons/mm2): 0 --- Average counts number: 7.36
+	>>> Event 809000000 --- Current (photons/mm2): 0 --- Average counts number: 7.37
+	>>> Event 810000000 --- Current (photons/mm2): 0 --- Average counts number: 7.38
+	>>> Event 811000000 --- Current (photons/mm2): 0 --- Average counts number: 7.39
+	>>> Event 812000000 --- Current (photons/mm2): 0 --- Average counts number: 7.4
+	>>> Event 813000000 --- Current (photons/mm2): 0 --- Average counts number: 7.41
+	>>> Event 814000000 --- Current (photons/mm2): 0 --- Average counts number: 7.41
+	>>> Event 815000000 --- Current (photons/mm2): 0 --- Average counts number: 7.42
+	>>> Event 816000000 --- Current (photons/mm2): 0 --- Average counts number: 7.43
+	>>> Event 817000000 --- Current (photons/mm2): 0 --- Average counts number: 7.44
+	>>> Event 818000000 --- Current (photons/mm2): 0 --- Average counts number: 7.45
+	>>> Event 819000000 --- Current (photons/mm2): 0 --- Average counts number: 7.46
+	>>> Event 820000000 --- Current (photons/mm2): 0 --- Average counts number: 7.47
+	>>> Event 821000000 --- Current (photons/mm2): 0 --- Average counts number: 7.48
+	>>> Event 822000000 --- Current (photons/mm2): 0 --- Average counts number: 7.49
+	>>> Event 823000000 --- Current (photons/mm2): 0 --- Average counts number: 7.5
+	>>> Event 824000000 --- Current (photons/mm2): 0 --- Average counts number: 7.51
+	>>> Event 825000000 --- Current (photons/mm2): 0 --- Average counts number: 7.51
+	>>> Event 826000000 --- Current (photons/mm2): 0 --- Average counts number: 7.52
+	>>> Event 827000000 --- Current (photons/mm2): 0 --- Average counts number: 7.53
+	>>> Event 828000000 --- Current (photons/mm2): 0 --- Average counts number: 7.54
+	>>> Event 829000000 --- Current (photons/mm2): 0 --- Average counts number: 7.55
+	>>> Event 830000000 --- Current (photons/mm2): 0 --- Average counts number: 7.56
+	>>> Event 831000000 --- Current (photons/mm2): 0 --- Average counts number: 7.57
+	>>> Event 832000000 --- Current (photons/mm2): 0 --- Average counts number: 7.58
+	>>> Event 833000000 --- Current (photons/mm2): 0 --- Average counts number: 7.59
+	>>> Event 834000000 --- Current (photons/mm2): 0 --- Average counts number: 7.6
+	>>> Event 835000000 --- Current (photons/mm2): 0 --- Average counts number: 7.6
+	>>> Event 836000000 --- Current (photons/mm2): 0 --- Average counts number: 7.61
+	>>> Event 837000000 --- Current (photons/mm2): 0 --- Average counts number: 7.62
+	>>> Event 838000000 --- Current (photons/mm2): 0 --- Average counts number: 7.63
+	>>> Event 839000000 --- Current (photons/mm2): 0 --- Average counts number: 7.64
+	>>> Event 840000000 --- Current (photons/mm2): 0 --- Average counts number: 7.65
+	>>> Event 841000000 --- Current (photons/mm2): 0 --- Average counts number: 7.66
+	>>> Event 842000000 --- Current (photons/mm2): 0 --- Average counts number: 7.67
+	>>> Event 843000000 --- Current (photons/mm2): 0 --- Average counts number: 7.68
+	>>> Event 844000000 --- Current (photons/mm2): 0 --- Average counts number: 7.69
+	>>> Event 845000000 --- Current (photons/mm2): 0 --- Average counts number: 7.7
+	>>> Event 846000000 --- Current (photons/mm2): 0 --- Average counts number: 7.71
+	>>> Event 847000000 --- Current (photons/mm2): 0 --- Average counts number: 7.72
+	>>> Event 848000000 --- Current (photons/mm2): 0 --- Average counts number: 7.73
+	>>> Event 849000000 --- Current (photons/mm2): 0 --- Average counts number: 7.73
+	>>> Event 850000000 --- Current (photons/mm2): 0 --- Average counts number: 7.74
+	>>> Event 851000000 --- Current (photons/mm2): 0 --- Average counts number: 7.75
+	>>> Event 852000000 --- Current (photons/mm2): 0 --- Average counts number: 7.76
+	>>> Event 853000000 --- Current (photons/mm2): 0 --- Average counts number: 7.77
+	>>> Event 854000000 --- Current (photons/mm2): 0 --- Average counts number: 7.78
+	>>> Event 855000000 --- Current (photons/mm2): 0 --- Average counts number: 7.79
+	>>> Event 856000000 --- Current (photons/mm2): 0 --- Average counts number: 7.8
+	>>> Event 857000000 --- Current (photons/mm2): 0 --- Average counts number: 7.81
+	>>> Event 858000000 --- Current (photons/mm2): 0 --- Average counts number: 7.82
+	>>> Event 859000000 --- Current (photons/mm2): 0 --- Average counts number: 7.82
+	>>> Event 860000000 --- Current (photons/mm2): 0 --- Average counts number: 7.83
+	>>> Event 861000000 --- Current (photons/mm2): 0 --- Average counts number: 7.84
+	>>> Event 862000000 --- Current (photons/mm2): 0 --- Average counts number: 7.85
+	>>> Event 863000000 --- Current (photons/mm2): 0 --- Average counts number: 7.86
+	>>> Event 864000000 --- Current (photons/mm2): 0 --- Average counts number: 7.87
+	>>> Event 865000000 --- Current (photons/mm2): 0 --- Average counts number: 7.88
+	>>> Event 866000000 --- Current (photons/mm2): 0 --- Average counts number: 7.89
+	>>> Event 867000000 --- Current (photons/mm2): 0 --- Average counts number: 7.9
+	>>> Event 868000000 --- Current (photons/mm2): 0 --- Average counts number: 7.91
+	>>> Event 869000000 --- Current (photons/mm2): 0 --- Average counts number: 7.92
+	>>> Event 870000000 --- Current (photons/mm2): 0 --- Average counts number: 7.92
+	>>> Event 871000000 --- Current (photons/mm2): 0 --- Average counts number: 7.93
+	>>> Event 872000000 --- Current (photons/mm2): 0 --- Average counts number: 7.94
+	>>> Event 873000000 --- Current (photons/mm2): 0 --- Average counts number: 7.95
+	>>> Event 874000000 --- Current (photons/mm2): 0 --- Average counts number: 7.96
+	>>> Event 875000000 --- Current (photons/mm2): 0 --- Average counts number: 7.97
+	>>> Event 876000000 --- Current (photons/mm2): 0 --- Average counts number: 7.98
+	>>> Event 877000000 --- Current (photons/mm2): 0 --- Average counts number: 7.99
+	>>> Event 878000000 --- Current (photons/mm2): 0 --- Average counts number: 8
+	>>> Event 879000000 --- Current (photons/mm2): 0 --- Average counts number: 8.01
+	>>> Event 880000000 --- Current (photons/mm2): 0 --- Average counts number: 8.02
+	>>> Event 881000000 --- Current (photons/mm2): 0 --- Average counts number: 8.03
+	>>> Event 882000000 --- Current (photons/mm2): 0 --- Average counts number: 8.04
+	>>> Event 883000000 --- Current (photons/mm2): 0 --- Average counts number: 8.05
+	>>> Event 884000000 --- Current (photons/mm2): 0 --- Average counts number: 8.06
+	>>> Event 885000000 --- Current (photons/mm2): 0 --- Average counts number: 8.07
+	>>> Event 886000000 --- Current (photons/mm2): 0 --- Average counts number: 8.08
+	>>> Event 887000000 --- Current (photons/mm2): 0 --- Average counts number: 8.09
+	>>> Event 888000000 --- Current (photons/mm2): 0 --- Average counts number: 8.09
+	>>> Event 889000000 --- Current (photons/mm2): 0 --- Average counts number: 8.1
+	>>> Event 890000000 --- Current (photons/mm2): 0 --- Average counts number: 8.11
+	>>> Event 891000000 --- Current (photons/mm2): 0 --- Average counts number: 8.12
+	>>> Event 892000000 --- Current (photons/mm2): 0 --- Average counts number: 8.13
+	>>> Event 893000000 --- Current (photons/mm2): 0 --- Average counts number: 8.14
+	>>> Event 894000000 --- Current (photons/mm2): 0 --- Average counts number: 8.15
+	>>> Event 895000000 --- Current (photons/mm2): 0 --- Average counts number: 8.16
+	>>> Event 896000000 --- Current (photons/mm2): 0 --- Average counts number: 8.17
+	>>> Event 897000000 --- Current (photons/mm2): 0 --- Average counts number: 8.18
+	>>> Event 898000000 --- Current (photons/mm2): 0 --- Average counts number: 8.19
+	>>> Event 899000000 --- Current (photons/mm2): 0 --- Average counts number: 8.2
+	>>> Event 900000000 --- Current (photons/mm2): 0 --- Average counts number: 8.2
+	>>> Event 901000000 --- Current (photons/mm2): 0 --- Average counts number: 8.21
+	>>> Event 902000000 --- Current (photons/mm2): 0 --- Average counts number: 8.22
+	>>> Event 903000000 --- Current (photons/mm2): 0 --- Average counts number: 8.23
+	>>> Event 904000000 --- Current (photons/mm2): 0 --- Average counts number: 8.24
+	>>> Event 905000000 --- Current (photons/mm2): 0 --- Average counts number: 8.25
+	>>> Event 906000000 --- Current (photons/mm2): 0 --- Average counts number: 8.26
+	>>> Event 907000000 --- Current (photons/mm2): 0 --- Average counts number: 8.27
+	>>> Event 908000000 --- Current (photons/mm2): 0 --- Average counts number: 8.28
+	>>> Event 909000000 --- Current (photons/mm2): 0 --- Average counts number: 8.29
+	>>> Event 910000000 --- Current (photons/mm2): 0 --- Average counts number: 8.3
+	>>> Event 911000000 --- Current (photons/mm2): 0 --- Average counts number: 8.31
+	>>> Event 912000000 --- Current (photons/mm2): 0 --- Average counts number: 8.32
+	>>> Event 913000000 --- Current (photons/mm2): 0 --- Average counts number: 8.32
+	>>> Event 914000000 --- Current (photons/mm2): 0 --- Average counts number: 8.33
+	>>> Event 915000000 --- Current (photons/mm2): 0 --- Average counts number: 8.34
+	>>> Event 916000000 --- Current (photons/mm2): 0 --- Average counts number: 8.35
+	>>> Event 917000000 --- Current (photons/mm2): 0 --- Average counts number: 8.36
+	>>> Event 918000000 --- Current (photons/mm2): 0 --- Average counts number: 8.37
+	>>> Event 919000000 --- Current (photons/mm2): 0 --- Average counts number: 8.38
+	>>> Event 920000000 --- Current (photons/mm2): 0 --- Average counts number: 8.39
+	>>> Event 921000000 --- Current (photons/mm2): 0 --- Average counts number: 8.4
+	>>> Event 922000000 --- Current (photons/mm2): 0 --- Average counts number: 8.41
+	>>> Event 923000000 --- Current (photons/mm2): 0 --- Average counts number: 8.42
+	>>> Event 924000000 --- Current (photons/mm2): 0 --- Average counts number: 8.42
+	>>> Event 925000000 --- Current (photons/mm2): 0 --- Average counts number: 8.43
+	>>> Event 926000000 --- Current (photons/mm2): 0 --- Average counts number: 8.44
+	>>> Event 927000000 --- Current (photons/mm2): 0 --- Average counts number: 8.45
+	>>> Event 928000000 --- Current (photons/mm2): 0 --- Average counts number: 8.46
+	>>> Event 929000000 --- Current (photons/mm2): 0 --- Average counts number: 8.47
+	>>> Event 930000000 --- Current (photons/mm2): 0 --- Average counts number: 8.48
+	>>> Event 931000000 --- Current (photons/mm2): 0 --- Average counts number: 8.49
+	>>> Event 932000000 --- Current (photons/mm2): 0 --- Average counts number: 8.5
+	>>> Event 933000000 --- Current (photons/mm2): 0 --- Average counts number: 8.51
+	>>> Event 934000000 --- Current (photons/mm2): 0 --- Average counts number: 8.52
+	>>> Event 935000000 --- Current (photons/mm2): 0 --- Average counts number: 8.52
+	>>> Event 936000000 --- Current (photons/mm2): 0 --- Average counts number: 8.53
+	>>> Event 937000000 --- Current (photons/mm2): 0 --- Average counts number: 8.54
+	>>> Event 938000000 --- Current (photons/mm2): 0 --- Average counts number: 8.55
+	>>> Event 939000000 --- Current (photons/mm2): 0 --- Average counts number: 8.56
+	>>> Event 940000000 --- Current (photons/mm2): 0 --- Average counts number: 8.57
+	>>> Event 941000000 --- Current (photons/mm2): 0 --- Average counts number: 8.58
+	>>> Event 942000000 --- Current (photons/mm2): 0 --- Average counts number: 8.59
+	>>> Event 943000000 --- Current (photons/mm2): 0 --- Average counts number: 8.6
+	>>> Event 944000000 --- Current (photons/mm2): 0 --- Average counts number: 8.6
+	>>> Event 945000000 --- Current (photons/mm2): 0 --- Average counts number: 8.61
+	>>> Event 946000000 --- Current (photons/mm2): 0 --- Average counts number: 8.62
+	>>> Event 947000000 --- Current (photons/mm2): 0 --- Average counts number: 8.63
+	>>> Event 948000000 --- Current (photons/mm2): 0 --- Average counts number: 8.64
+	>>> Event 949000000 --- Current (photons/mm2): 0 --- Average counts number: 8.65
+	>>> Event 950000000 --- Current (photons/mm2): 0 --- Average counts number: 8.66
+	>>> Event 951000000 --- Current (photons/mm2): 0 --- Average counts number: 8.67
+	>>> Event 952000000 --- Current (photons/mm2): 0 --- Average counts number: 8.68
+	>>> Event 953000000 --- Current (photons/mm2): 0 --- Average counts number: 8.68
+	>>> Event 954000000 --- Current (photons/mm2): 0 --- Average counts number: 8.69
+	>>> Event 955000000 --- Current (photons/mm2): 0 --- Average counts number: 8.7
+	>>> Event 956000000 --- Current (photons/mm2): 0 --- Average counts number: 8.71
+	>>> Event 957000000 --- Current (photons/mm2): 0 --- Average counts number: 8.72
+	>>> Event 958000000 --- Current (photons/mm2): 0 --- Average counts number: 8.73
+	>>> Event 959000000 --- Current (photons/mm2): 0 --- Average counts number: 8.74
+	>>> Event 960000000 --- Current (photons/mm2): 0 --- Average counts number: 8.75
+	>>> Event 961000000 --- Current (photons/mm2): 0 --- Average counts number: 8.76
+	>>> Event 962000000 --- Current (photons/mm2): 0 --- Average counts number: 8.77
+	>>> Event 963000000 --- Current (photons/mm2): 0 --- Average counts number: 8.78
+	>>> Event 964000000 --- Current (photons/mm2): 0 --- Average counts number: 8.79
+	>>> Event 965000000 --- Current (photons/mm2): 0 --- Average counts number: 8.8
+	>>> Event 966000000 --- Current (photons/mm2): 0 --- Average counts number: 8.81
+	>>> Event 967000000 --- Current (photons/mm2): 0 --- Average counts number: 8.81
+	>>> Event 968000000 --- Current (photons/mm2): 0 --- Average counts number: 8.82
+	>>> Event 969000000 --- Current (photons/mm2): 0 --- Average counts number: 8.83
+	>>> Event 970000000 --- Current (photons/mm2): 0 --- Average counts number: 8.84
+	>>> Event 971000000 --- Current (photons/mm2): 0 --- Average counts number: 8.85
+	>>> Event 972000000 --- Current (photons/mm2): 0 --- Average counts number: 8.86
+	>>> Event 973000000 --- Current (photons/mm2): 0 --- Average counts number: 8.87
+	>>> Event 974000000 --- Current (photons/mm2): 0 --- Average counts number: 8.88
+	>>> Event 975000000 --- Current (photons/mm2): 0 --- Average counts number: 8.89
+	>>> Event 976000000 --- Current (photons/mm2): 0 --- Average counts number: 8.9
+	>>> Event 977000000 --- Current (photons/mm2): 0 --- Average counts number: 8.91
+	>>> Event 978000000 --- Current (photons/mm2): 0 --- Average counts number: 8.91
+	>>> Event 979000000 --- Current (photons/mm2): 0 --- Average counts number: 8.92
+	>>> Event 980000000 --- Current (photons/mm2): 0 --- Average counts number: 8.93
+	>>> Event 981000000 --- Current (photons/mm2): 0 --- Average counts number: 8.94
+	>>> Event 982000000 --- Current (photons/mm2): 0 --- Average counts number: 8.95
+	>>> Event 983000000 --- Current (photons/mm2): 0 --- Average counts number: 8.96
+	>>> Event 984000000 --- Current (photons/mm2): 0 --- Average counts number: 8.97
+	>>> Event 985000000 --- Current (photons/mm2): 0 --- Average counts number: 8.98
+	>>> Event 986000000 --- Current (photons/mm2): 0 --- Average counts number: 8.99
+	>>> Event 987000000 --- Current (photons/mm2): 0 --- Average counts number: 9
+	>>> Event 988000000 --- Current (photons/mm2): 0 --- Average counts number: 9.01
+	>>> Event 989000000 --- Current (photons/mm2): 0 --- Average counts number: 9.01
+	>>> Event 990000000 --- Current (photons/mm2): 0 --- Average counts number: 9.02
+	>>> Event 991000000 --- Current (photons/mm2): 0 --- Average counts number: 9.03
+	>>> Event 992000000 --- Current (photons/mm2): 0 --- Average counts number: 9.04
+	>>> Event 993000000 --- Current (photons/mm2): 0 --- Average counts number: 9.05
+	>>> Event 994000000 --- Current (photons/mm2): 0 --- Average counts number: 9.06
+	>>> Event 995000000 --- Current (photons/mm2): 0 --- Average counts number: 9.07
+	>>> Event 996000000 --- Current (photons/mm2): 0 --- Average counts number: 9.08
+	>>> Event 997000000 --- Current (photons/mm2): 0 --- Average counts number: 9.09
+	>>> Event 998000000 --- Current (photons/mm2): 0 --- Average counts number: 9.1
+	>>> Event 999000000 --- Current (photons/mm2): 0 --- Average counts number: 9.11
+
+
+
+
+
+Frame_1_d0m_a3um_p20um_step20_dith0_1.raw
+
+|---### End of Frame    1 of 1 ###---
+|
+| The sample was at position: 20 um
+| The sample mask was at position: 20 um
+| The sample was at angle: 90 deg
+| The Run consisted of: 1000000000 Events
+| User elapsed time is: 9.16 hours
+| User time remaining is: 0 ps   
+|
+| The photon current per unit area (mm2) on the Object is: 0
+|
+|     Saving data in: 'Frame_1_d0m_a3um_p20um_step20_dith0_1.raw'
+|
+|---### End of Frame    1 of 1 ###---
+
+
+|---------------### End of Simulation ###---------------
+|
+| The Simulation consisted of:    1 Projections
+| User time elapsed is: 9.16 hours
+|
+| The Frames are 256 x 256 pixels
+|
+|---------------### End of Simulation ###---------------
+
+Graphics systems deleted.
+Visualization Manager deleting...
+### deleting gammaEKinFilter 0x5632725b5bf0
+### deleting protonFilter 0x5632726526a0
+### deleting protonFilter 0x563272652d90

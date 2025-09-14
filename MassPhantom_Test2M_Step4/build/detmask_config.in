@@ -1,0 +1,26 @@
+# Determines if you have a whole detector (true) or a single horizontal strip of pixels (false).
+/Pepi/det/setBidimensional true
+
+# Set the position of the source with respect the whole simulation's world.
+/Pepi/det/setSourcePosZ -85 cm
+
+# Distances needed to define the magnification:
+/Pepi/det/setSrcObjDistance 60 cm   # Source to Object.
+/Pepi/det/setObjectDetDistance 5 cm # Object to Detector.
+
+# Mask properties:
+/Pepi/det/setMaskThickness 100 um
+/Pepi/det/setM2Pitch 20 um
+/Pepi/det/setM2Aperture 3 um
+/Pepi/det/setRotAngle 0 deg
+
+# Acquisition type, it will stay in singlemask for the means of this proyect.
+/Pepi/det/setAcquisitionType conventional
+
+# I will stay with an ideal detector type:
+/Pepi/det/setDetType 0COL 
+# 0COL -> No thresholds, 1COL -> 1 threshold, 2COL -> 2 thresholds, ..., NCOL -> N thresholds.
+
+# Energy thresholds for non-ideal detector types. You should add thresholds according to your interests.
+/Pepi/det/setThreshold1 10 keV
+/Pepi/det/setThreshold2 30 keV

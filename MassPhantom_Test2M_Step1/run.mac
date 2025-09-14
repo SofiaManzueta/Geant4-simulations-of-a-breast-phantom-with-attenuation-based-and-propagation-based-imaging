@@ -1,0 +1,28 @@
+# Assignation of threads in the multithreaded case (not implemented yet):
+/run/numberOfThreads 4
+
+# Initialization of the simulation components:
+/control/verbose 0
+/control/saveHistory
+/run/verbose 0
+/control/execute gps.in
+/control/execute detmask_config.in
+/Pepi/cont/loadConfig geometry_config.in
+#/control/macroPath ../spectra
+/control/execute ../spectra/28kV_Rhfilter.in
+#/control/macroPath ../build
+/Pepi/cont/setBaseName Frame_1
+/run/initialize
+/control/execute ../scorers.mac
+#/run/printProgress 1000000
+
+# Number of events of the simulation. Make sure the number is less than 2,147,483,647
+# as this is the bite limit for 32 bits systems like this.
+#/run/printProgress 1000000  
+/Pepi/cont/beamOn 2000000000
+
+
+# Not quite sure what this does...
+#/score/dumpQuantityToFile Mesh1 dose dose_28kVInLine2_.out
+#/score/dumpQuantityToFile Mesh2 dose dose_40_Rh.out
+#/score/dumpQuantityToFile Mesh2 protonCellFlux protonCellFlux_2.out
